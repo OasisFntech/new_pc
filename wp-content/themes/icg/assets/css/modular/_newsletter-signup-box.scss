@@ -1,0 +1,43 @@
+.newsletter-signup-box {
+	background: rgba(0, 59, 73,0.05);
+	display: flex;
+	align-items: center;
+	text-align: center;
+	padding: 70px;
+
+	svg {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity .5s linear, visibility .5s linear;
+	}
+
+	.signup-box-title {
+	    font-size: 24px;
+	    line-height: 31px;
+	    margin-top: 15px;
+	    opacity: 1;
+		visibility: visible;
+		transition: opacity .5s linear, visibility .5s linear;
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 450px;
+		margin: auto;
+		position: relative;
+	}
+
+	.icg-newsletter-form {
+		@include media-breakpoint-up(lg) {
+			margin-top: 24px;
+		}
+
+		input[type="email"] {
+			color: $black;
+
+			&::placeholder {
+				color: $black;
+			}
+		}
+	}
+}

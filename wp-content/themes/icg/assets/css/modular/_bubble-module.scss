@@ -1,0 +1,356 @@
+.icg-bubble_module {
+	margin: 100px 0px;
+	padding: 10px 0px;
+	overflow: hidden;
+
+	@include media-breakpoint-up(md) {
+		padding: 10px 0px 110px;
+		margin: 100px 0 0px;
+	}
+
+	.header {
+		padding: 0 20px;
+	}
+
+	.title {
+		font-size: 28px;
+		line-height: 28px;
+		font-weight: 400;
+		color: $green;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 42px;
+			line-height: 65px;
+		}
+	}
+
+	.content {
+		color: $green;
+		max-width: 405px;
+		margin: 20px auto;
+
+		@include media-breakpoint-up(lg) {
+			max-width: 500px;
+		}
+	}
+
+	.bubbles__wrapper {
+		margin-top: 95px;
+		width: 100%;		
+		position: relative;
+
+		@include media-breakpoint-down(lg) {
+			display: flex;
+			max-width: 610px;
+			flex-wrap: wrap;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 50px;
+		}
+
+		@include media-breakpoint-down(md) {
+			max-width: 290px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			height: 590px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			height: 690px;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			height: 590px;
+		}
+
+		.bubble {
+		    z-index: 2;
+		    position: relative;
+
+		    @include media-breakpoint-down(lg) {
+		    	margin-bottom: 20px;
+		    }
+
+		    @include media-breakpoint-down(md) {
+		    	margin-bottom: 25px;
+		    }
+
+		    @include media-breakpoint-up(lg) {
+		    	position: absolute;
+		    }
+
+		    &:hover {
+		    	z-index: 1;
+
+		    	.bubble-content {
+		    		background: $blue;
+		    		pointer-events: auto;
+
+		    		&:before {
+		    			@include media-breakpoint-up(lg) {
+		    				opacity: 1;	
+		    			}
+		    		}
+		    		
+		    		&:after {
+		    			@include media-breakpoint-up(lg) {
+		    				opacity: .5;
+		    			}
+		    		}
+		    	}
+
+		    	&:before {
+		    		@include media-breakpoint-up(lg) {
+		    			opacity: 1;
+		    		}
+		    	}
+		    }
+
+		    &:nth-child(1) {
+
+		    	@include media-breakpoint-up(lg) {
+			    	top: -80px;
+			    	left: 7%;
+			    }
+
+		    	@include media-breakpoint-up(xxl) {
+					top: -150px;
+		    		left: 100px;		    		
+		    	}
+		    }
+
+		    &:nth-child(2) {
+
+		    	@include media-breakpoint-between(md,lg) {
+		    		margin-left: 30px;
+		    	}
+
+		    	@include media-breakpoint-up(lg) {
+			    	top: 70px;
+			    	left: 38%;
+			    }
+
+		    	@include media-breakpoint-up(xxl) {
+		    		top: 0px;
+		    		left: 595px;
+		    	}
+		    }
+
+		    &:nth-child(3) {
+
+		    	@include media-breakpoint-up(lg) {
+			    	top: 170px;
+			    	left: 69%;
+			    }
+
+		    	@include media-breakpoint-up(xxl) {
+		    		top: 100px;
+		    		right: 70px;
+		    		left: auto;
+		    	}
+		    }
+
+		    &:nth-child(4) {
+
+		    	@include media-breakpoint-between(md,lg) {
+		    		margin-left: 30px;
+		    	}
+
+		    	@include media-breakpoint-up(lg) {
+			    	top: 305px;
+			    	left: 12%;
+			    }
+
+		    	@include media-breakpoint-up(xxl) {
+		    		top: 235px;
+		    		left: 235px;
+		    	}
+		    }
+
+		    &:before {
+		    	content: '';
+		    	position: absolute;
+		    	top: -9px;
+		    	left: -9px;
+		    	width: calc(100% + 13px);
+		    	height: calc(100% + 13px);
+				border: 2px solid $blue;	
+		    	border-radius: 100%;
+		    	opacity: 0;
+		    	transition: opacity .3s linear;
+		    	transition-delay: .1s;
+		    	animation: animscale 3s infinite;
+
+		    	@include media-breakpoint-up(xl) {
+		    		top: -13px;
+		    		left: -13px;
+		    		width: calc(100% + 23px);
+		    		height: calc(100% + 23px);
+		    	}
+		    }
+
+		    .bubble-content {
+		    	width: 290px;
+	    		height: 290px;
+		    	border-radius: 100%;
+			    background: $green;
+		    	display: flex;
+			    align-items: center;
+			    justify-content: center;
+			    transition: background .2s linear;
+		    	text-align: center;
+		    	color: $white;
+		    	position: relative; 
+		    	pointer-events: none;
+
+		    	@include media-breakpoint-up(xl) {
+			    	width: 355px;
+		    		height: 355px;
+		    	}
+
+		    	&:before {
+			    	content: '';
+			    	position: absolute;
+			    	top: -32px;
+			    	left: -32px;
+			    	width: calc(100% + 56px);
+			    	height: calc(100% + 56px);
+					border: 1px solid $blue;
+			    	border-radius: 100%;
+			    	opacity: 0;
+			    	transition: opacity .3s linear;
+			    	transition-delay: .2s;
+			    	animation: animscale 3s infinite;
+			    	animation-delay: .4s;
+
+			    	@include media-breakpoint-up(xl) {
+			    		top: -47px;
+			    		left: -47px;
+			    		width: calc(100% + 91px);
+			    		height: calc(100% + 91px);
+			    	}
+			    }
+
+			    &:after {
+			    	content: '';
+			    	position: absolute;
+			    	top: -77px;
+			    	left: -77px;
+			    	width: calc(100% + 146px);
+			    	height: calc(100% + 146px);
+					border: 1px solid $blue;
+			    	border-radius: 100%;
+			    	opacity: 0;
+			    	transition: opacity .3s linear;
+			    	transition-delay: .3s;
+			    	animation: animscale 3s infinite;
+			    	animation-delay: .8s;
+
+			    	@include media-breakpoint-up(xl) {
+			    		top: -107px;
+			    		left: -107px;
+			    		width: calc(100% + 211px);
+			    		height: calc(100% + 211px);
+			    	}
+			    }
+
+		    	&__wrap {
+		    		max-width: 230px;	
+		    	}
+
+		    	.bubble-title {
+		    		font-size: 30px;
+		    		line-height: 30px;
+		    	}
+
+		    	.bubble-subtitle {
+		    		font-size: 16px;
+		    		line-height: 24px;
+		    		font-weight: 400;
+		    		margin-top: 15px;
+
+		    		@include media-breakpoint-up(xl) {
+		    			font-size: 18px;
+		    			line-height: 26px;
+		    			margin-top: 20px;
+		    		}
+		    	}
+
+		    	.bubble-amount {
+		    		font-size: 24px;
+		    		line-height: 26px;
+		    		font-weight: 700;
+		    		margin-top: 17px;
+
+		    		@include media-breakpoint-up(xl) {
+		    			margin-top: 20px;
+		    		}
+		    	}
+
+		    	.cta {
+		    		margin-top: 20px;
+		    		color: inherit;
+		    		background-image: url('../images/link-arrow.svg');
+
+		    		@include media-breakpoint-up(xl) {
+		    			margin-top: 35px;
+		    		}
+		    	}
+		    }
+
+		    .bubble-link {
+		    	position: absolute;
+		    	top: 0;
+		    	left: 0;
+		    	width: 100%;
+		    	height: 100%;
+		    }
+		}
+	}
+
+	&.count-3 {
+		.bubbles__wrapper {
+			height: auto;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			max-width: 1030px;
+			margin-left: auto;
+			margin-right: auto;
+
+			@include media-breakpoint-up(xl) {
+				max-width: 1225px;
+			}
+
+			@include media-breakpoint-down(xl) {
+				max-width: 610px;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			@include media-breakpoint-down(md) {
+				max-width: 290px;
+			}
+
+			.bubble {
+				position: relative;
+				top: auto;
+				left: auto;
+				right: auto;
+				margin-left: 0;
+
+				&:nth-child(2) {
+					@include media-breakpoint-between(md,xl) {
+						margin-left: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes animscale {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.02); }
+}

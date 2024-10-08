@@ -1,0 +1,106 @@
+.icg-page_post_module {
+	margin: 125px 0px;
+
+	@include media-breakpoint-up(lg) {
+		margin: 180px 0px;	
+	}
+
+	.module-title {
+		font-size: 28px;
+		line-height: 28px;
+		font-weight: 400;
+		color: $green;
+		margin-bottom: 25px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 42px;
+			line-height: 65px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.module-content {
+		font-size: 20px;
+		line-height: 30px;
+		margin-bottom: 20px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 35px;
+			line-height: 45px;
+		}
+	}
+
+	.page-post__grid {
+
+		@include media-breakpoint-down(md) {
+			display: block;
+		}
+
+		article {
+
+			@include media-breakpoint-up(md) {
+				width: calc((100% - 40px) / 2);	
+			}
+
+			@include media-breakpoint-up(lg) {
+				display: flex;
+				padding-top: 30px;
+				padding-bottom: 30px;
+				width: calc((100% - 48px) / 2);	
+			}
+
+			&:nth-child(1),
+			&:nth-child(4) {
+				@include media-breakpoint-down(lg) {
+					display: none;
+				}
+			}
+
+			&:nth-child(2n+2) {
+				@include media-breakpoint-up(lg) {
+					margin-left: 48px;
+				}
+			}
+
+			&:nth-child(3) {
+				@include media-breakpoint-between(md,lg) {
+					margin-left: 40px;
+				}
+
+				@include media-breakpoint-down(md) {
+					padding-top: 25px;
+					margin-top: 25px;
+					border-top: 1px solid $grey;
+				}
+			}
+
+			&:not(:nth-child(1)):not(:nth-child(2)) {
+				@include media-breakpoint-up(lg) {
+					border-top: 1px solid $grey;
+				}
+			}
+
+			.image-container {
+				flex: 0 175px;
+
+				@include media-breakpoint-up(xl) {
+					flex: 0 235px;	
+				}
+			}
+
+			.text-container {
+				flex: 1;
+
+				@include media-breakpoint-up(lg) {
+					padding-top: 0px;
+					padding-left: 20px;
+				}
+
+				@include media-breakpoint-up(xl) {
+					padding-top: 20px;
+					padding-left: 30px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.icg-lightbox_grid_module {
+	margin: 120px 0px;
+
+	@include media-breakpoint-up(lg) {
+		margin: 200px 0px 150px;	
+	}
+
+	.module-title {
+		font-size: 28px;
+		line-height: 28px;
+		font-weight: 400;
+		color: $green;
+		margin-bottom: 25px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 42px;
+			line-height: 65px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.module-content {
+		font-size: 20px;
+		line-height: 30px;
+		margin-bottom: 20px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 35px;
+			line-height: 45px;
+		}
+	}
+}

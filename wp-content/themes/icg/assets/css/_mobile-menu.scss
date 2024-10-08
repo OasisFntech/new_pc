@@ -1,0 +1,226 @@
+#mobilemenuModal {
+    background: linear-gradient(181.53deg, #003B49 50.81%, #3A4BFB 99.23%, #3A4BFB 99.23%);
+    backdrop-filter: blur(10px);
+    background-blend-mode: multiply;
+    color: $white;
+
+    .modal-dialog {
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    .modal-content {
+        background: transparent;
+        border: none;
+        border-radius: 0px;
+        min-height: 100vh;
+    }
+
+    .modal-header {
+        border-bottom: none;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        padding: 30px;
+        display: block;
+
+        @include media-breakpoint-up(md) {
+            padding: 40px 54px 40px 45px;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            color: $white;
+            text-decoration: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .2s linear;
+
+            &.active {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            img {
+                transform: scale(-1);
+                margin-right: 7px;
+            }
+        }
+
+        .btn-close {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            margin: 0;
+            padding: 30px;
+            line-height: 0;
+            cursor: pointer;
+
+            @include media-breakpoint-up(md) {
+                padding: 36px 44px;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 0 30px;
+        font-size: 22px;
+        flex: 0 auto;
+
+        @include media-breakpoint-up(md) {
+            font-size: 30px;
+            padding: 0 45px 30px;
+        }
+
+        &__content {
+            position: relative;
+
+            .mobile-dropdown-menu {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                touch-action: none;
+                pointer-events: none;
+
+                &.active {
+                    touch-action: pan;
+                    pointer-events: auto;
+                }
+
+                ul {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    flex-direction: column;
+                    transform: translateX(calc(100% + 45px));
+                    transition: transform .2s linear;
+
+                    &.active {
+                        transform: translateX(0);
+
+                        &.inactive {
+                            li.active {
+                                > a {
+                                    opacity: 0;
+                                    pointer-events: none;
+                                }
+                            }
+
+                            > li:not(.active) {
+                                opacity: 0;
+                                pointer-events: none;
+                            }
+                        }
+                    }
+
+                    li {
+                        margin-bottom: 40px;
+                        opacity: 1;
+                        transition: opacity .2s linear;
+
+                        @include media-breakpoint-up(md) {
+                            margin-bottom: 60px;
+                        }
+
+                        a {
+                            opacity: 1;
+                            transition: opacity .2s linear;
+                            
+                            &:hover,
+                            &:focus {
+                                color: $white;
+                            }
+                        }
+
+                        &.menu-item-has-children {
+                            a {
+                                display: block;
+                            }
+
+                            > a {
+
+                                span {
+                                    background-image: url('../images/arrow-right.svg');
+                                    background-repeat: no-repeat;
+                                    background-position: right bottom 6px;
+                                    padding-right: 17px;
+                                    background-size: 6px;
+
+                                    @include media-breakpoint-up(md) {
+                                        background-size: 9px;
+                                        padding-right: 25px;
+                                        background-position: right bottom 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #mobile-menu {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+
+                    @include media-breakpoint-up(md) {
+                        margin-bottom: 60px;
+                    }
+                }
+
+                a {
+                    display: block;
+
+                    &:hover,
+                    &:focus {
+                        color: $white;
+                    }
+
+                    &.mobile-dropdown__trigger {
+                        span {
+                            background-image: url('../images/arrow-right.svg');
+                            background-repeat: no-repeat;
+                            background-position: right bottom 6px;
+                            padding-right: 17px;
+                            background-size: 6px;
+
+                            @include media-breakpoint-up(md) {
+                                background-size: 9px;
+                                padding-right: 25px;
+                                background-position: right bottom 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #utility-menu {
+            text-align: right;
+
+            @include media-breakpoint-down(md) {
+                margin-top: 40px;
+            }
+
+            li {
+                font-size: 13px;
+                line-height: 40px;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 20px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+
+                    @include media-breakpoint-up(md) {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

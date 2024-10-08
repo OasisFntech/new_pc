@@ -1,0 +1,259 @@
+.icg-slider_custom_team_module {
+	margin: 120px 0px;
+
+	@include media-breakpoint-up(lg) {
+		margin: 180px 0px;
+	}
+
+	h2 {
+		font-weight: 400;
+		color: $green;
+		font-size: 28px;
+		line-height: 28px;
+		margin-bottom: 30px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 42px;
+			line-height: 47px;
+			margin-bottom: 40px;
+		}
+	}
+
+	.module-description {
+		font-size: 17px;
+		line-height: 26px;
+		margin-top: -10px;
+		margin-bottom: 30px;
+		max-width: 920px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 24px;
+			line-height: 38px;
+			margin-top: -30px;
+			margin-bottom: 60px;
+		}
+	}
+
+	.slider-custom-team {
+		background: #F2F5F6;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 0;
+			padding-bottom: 100px;
+		}
+
+		&__container {
+			position: relative;
+
+			@include media-breakpoint-down(md) {
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+		}
+
+		.slider-item {
+			background: #F2F5F6;
+			padding: 60px 35px 0px;
+
+			@include media-breakpoint-up(md) {
+				padding: 80px 60px;	
+			}
+
+			@include media-breakpoint-up(xl) {
+				padding: 110px 85px;				
+			}
+
+			&__wrapper {
+				margin-left: auto;
+				margin-right: auto;
+				align-items: center;
+
+				@include media-breakpoint-down(md) {
+					flex-direction: column-reverse;
+				}
+
+				@include media-breakpoint-up(lg) {
+					max-width: 1060px;
+				}
+			}
+
+			&__left {
+				flex: 1;
+
+				@include media-breakpoint-down(md) {
+					text-align: center;
+				}
+
+				@include media-breakpoint-up(md) {
+					padding-right: 40px;	
+				}
+
+				.description {
+					font-size: 16px;
+					line-height: 24px;
+
+					@include media-breakpoint-up(md) {
+						font-size: 24px;
+						line-height: 38px;	
+					}
+				}
+
+				.description + .item-title {
+					margin-top: 20px;
+				}
+
+				.item-title {
+					@include media-breakpoint-down(lg) {
+						font-size: 21px;
+						line-height: 25px;
+					}
+				}
+
+				.item-title__wrapper.top {
+					margin-bottom: 25px;
+
+					.item-title {
+						font-size: 28px;
+						line-height: 1;
+						font-weight: 400;
+
+						@include media-breakpoint-up(lg) {
+							font-size: 42px;
+							line-height: 50px;
+							color: $green;
+						}
+					}
+				}
+
+				.item-subtitle {
+					font-size: 19px;
+					line-height: 25px;
+
+					@include media-breakpoint-up(lg) {
+						font-size: 24px;
+						line-height: 29px;
+					}
+				}
+
+				.module-cta {
+					margin-top: 60px;
+					padding: 14px 40px 14px 25px;
+					border-radius: 40px;
+					background: transparent;
+					color: $black;
+					font-size: 16px;
+
+					&:hover {
+						background: $blue;
+						color: $white;
+					}
+
+					&.external-link {
+						background-image: url('../images/link-arrow-external-blue.svg');
+						background-size: 15px;
+			    		background-position: right 14px center;
+			    		background-repeat: no-repeat;
+
+			    		@include media-breakpoint-up(lg) {
+			    			background-size: 17px;
+			    		}
+
+			    		&:hover {
+			    			background-image: url('../images/link-arrow-external.svg');
+			    		}
+					}
+				}
+			}
+
+			&__right {
+
+				@include media-breakpoint-down(md) {
+					max-width: 240px;
+					margin-bottom: 35px;
+				}
+
+				@include media-breakpoint-up(md) {
+					flex: 0 150px;	
+				}
+
+				@include media-breakpoint-up(lg) {
+					flex: 0 310px;
+				}
+
+				.item-image {
+					border-radius: 100%;
+				}
+			}
+		}
+
+		.slick-dots {
+			bottom: 40px;
+
+			@include media-breakpoint-up(md) {
+				bottom: -70px;	
+			}
+
+			li {
+				width: 15px;
+				height: 15px;
+
+				&.slick-active {
+					button {
+						&:before {
+							color: $blue;
+						}
+					}
+				}
+
+				button {
+					width: 15px;
+					height: 15px;
+
+					&:before {
+						font-size: 14px;
+						height: 15px;
+						line-height: 15px;
+						width: 15px;
+						color: rgba(217, 217, 217, 0.5);
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	.slider-custom-team-controls {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+
+		.slick-prev,
+		.slick-next {
+			z-index: 1;
+			height: 20px;
+
+			&:before {
+				content: '';
+			}
+		}
+
+		.slick-prev {
+			left: -32px;
+
+			@include media-breakpoint-up(xxl) {
+				left: -55px;
+			}
+		}
+
+		.slick-next {
+			right: -32px;
+
+			@include media-breakpoint-up(xxl) {
+				right: -55px;
+			}
+		}
+	}
+	
+}

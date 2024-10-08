@@ -1,0 +1,153 @@
+.icg-related_content_module {
+	margin: 120px 0px;
+
+	@include media-breakpoint-up(lg) {
+		margin: 150px 0px;	
+	}
+
+	&__header {
+		margin-bottom: 40px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&.people {
+		.header {
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 40px;
+		}
+
+		.title {
+			margin-bottom: 0px;
+		}
+
+		.view-all-cta {
+			min-width: 92px;
+
+			@include media-breakpoint-down(lg) {
+				margin-top: 60px;
+			}
+		}
+	}
+
+	.title {
+		font-size: 28px;
+		line-height: 28px;
+		margin-bottom: 0px;
+		font-weight: 400;
+		color: $green;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 42px;
+			line-height: 48px;
+		}
+	}
+
+	.related-content__grid {
+
+		&-slider--nav {
+			position: relative;
+			width: 70px;
+
+			.slick-prev {
+				left: 0;
+			}
+
+			.slick-next {
+				right: 0;
+				transform: translateY(-50%) scale(-1);
+			}
+
+			.slick-disabled {
+				opacity: .3;
+			}
+
+			.slick-prev,
+			.slick-next {
+				width: 30px;
+				height: 30px;
+
+				&:before {
+					content: '';
+				}
+			}
+		}
+
+		&.related-content__grid-slider {
+
+			@include media-breakpoint-up(md) {
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				margin-left: -24px;
+				margin-right: -24px;
+			}
+
+			.slick-track {
+				margin: initial;
+			}
+
+			article {
+				@include media-breakpoint-up(md) {
+					margin: 0 20px;
+				}
+
+				@include media-breakpoint-up(lg) {
+					margin: 0 24px;	
+				}
+			}
+		}
+
+		&:not(.related-content__grid-slider) {
+
+			article {
+
+				@include media-breakpoint-up(md) {
+					width: calc((100% - 40px) / 2);	
+				}
+
+				@include media-breakpoint-up(lg) {
+					width: calc((100% - 96px) / 3);	
+				}
+
+				&:not(:first-child) {
+					@include media-breakpoint-up(md) {
+						margin-left: 40px;
+					}
+
+					@include media-breakpoint-up(lg) {
+						margin-left: 48px;
+					}
+				}
+
+				&:nth-child(2) {
+					@include media-breakpoint-down(md) {
+						margin-top: 40px;
+					}
+				}
+
+				&:nth-child(3),
+				&:nth-child(4) {
+					@include media-breakpoint-down(lg) {
+						display: none;
+					}
+				}
+
+				.text-container {
+					@include media-breakpoint-up(lg) {
+						padding-top: 10px;	
+					}
+				}
+
+				&.type-people {
+					@include media-breakpoint-up(lg) {
+						width: calc((100% - 144px) / 4);	
+					}
+				}
+			}
+		}
+	}
+}

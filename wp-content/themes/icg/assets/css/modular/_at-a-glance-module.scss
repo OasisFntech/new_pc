@@ -1,0 +1,71 @@
+.icg-at_a_glance_module {
+	margin: 100px 0px 120px;
+
+	@include media-breakpoint-up(lg) {
+		margin: 150px 0px 180px;	
+	}
+
+	h2 {
+		font-weight: 400;
+		color: $green;
+		font-size: 28px;
+		line-height: 28px;
+		margin-bottom: 25px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 42px;
+			line-height: 65px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.at-a-glance__wrapper {
+
+		@include media-breakpoint-down(lg) {
+			display: block;
+		}
+		
+		.wrapper__left {
+			flex: 1;
+
+			@include media-breakpoint-up(lg) {
+				padding-right: 35px;
+			}
+		}
+
+		.wrapper__right {
+
+			@include media-breakpoint-down(lg) {
+				padding-top: 30px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				flex: 0 290px;
+			}
+
+			.content-wrapper {
+				line-height: 26px;
+
+				@include media-breakpoint-down(lg) {
+					max-width: 450px;
+				}
+			}
+
+			h3 {
+				font-size: 20px;
+				line-height: 24px;
+				font-weight: 500;
+				position: relative;
+				color: $green;
+				margin-bottom: 10px;
+
+				@include media-breakpoint-up(lg) {
+					font-size: 24px;
+					line-height: 32px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	
+}

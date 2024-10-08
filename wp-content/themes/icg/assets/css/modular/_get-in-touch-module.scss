@@ -1,0 +1,146 @@
+.icg-get_in_touch_module {
+	background: rgba(0, 59, 73, 0.05);
+
+	&.no-padding {
+		@include media-breakpoint-down(lg) {
+			padding: 75px 0px;
+		}
+	}
+
+	&:not(.no-margin) {
+		margin: 100px 0px;
+
+		@include media-breakpoint-up(lg) {
+			margin: 150px 0px;
+		}
+	}
+
+	&:not(.no-padding) {
+		padding: 75px 0px;
+
+		@include media-breakpoint-up(md) {
+			padding: 80px 0px 65px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding: 140px 0px 150px;
+		}
+	}
+
+	&+.icg-get_in_touch_module {
+		@include media-breakpoint-down(md) {
+			margin-top: -100px;
+		}
+	}
+	
+	&.transparent-background {
+		@include media-breakpoint-up(md) {
+			background: transparent;
+		}
+	}
+
+	&.no-margin {
+		&+.icg-get_in_touch_module.no-margin {
+			@include media-breakpoint-down(md) {
+				margin-top: 0px;
+			}
+		}
+	}
+
+	h2 {
+		font-weight: 400;
+		color: $green;
+		font-size: 28px;
+		line-height: 34px;
+		margin-bottom: 20px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 42px;
+			line-height: 65px;
+			margin-bottom: 25px;
+		}
+	}
+
+	.get-in-touch__wrapper {
+
+		@include media-breakpoint-down(md) {
+			display: block;
+		}
+
+		&.image-left {
+			@include media-breakpoint-up(md) {
+				flex-direction: row-reverse;
+			}
+
+			.get-in-touch__left {
+				@include media-breakpoint-up(md) {
+					padding-right: 0px;
+					padding-left: 45px;
+				}
+
+				@include media-breakpoint-up(lg) {
+					padding-left: 75px;
+				}
+			}
+		}
+		
+		.get-in-touch__left {
+			font-size: 20px;
+			line-height: 30px;
+
+			@include media-breakpoint-up(md) {
+				width: calc(100% - 200px);
+				padding-right: 45px;	
+			}
+
+			@include media-breakpoint-up(lg) {
+				font-size: 35px;
+				line-height: 45px;
+				width: calc(100% - 380px);
+				padding-right: 75px;
+			}
+
+			&.smaller-font-size {
+				@include media-breakpoint-up(lg) {
+					font-size: 24px;
+					line-height: 38px;
+				}
+
+				p { 
+					margin-bottom: 30px; 
+				}
+			}
+
+			.get-in-touch__cta {
+				margin-top: 20px;
+			} 
+		}
+
+		.get-in-touch__right {
+			@include media-breakpoint-down(md) {
+				width: 100%;
+				max-width: 345px;
+				padding-top: 40px;
+			}
+
+			@include media-breakpoint-up(md) {
+				width: 200px;	
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: 380px;
+			}
+
+			.image-wrapper {
+				position: relative;
+				padding-top: 100%;
+			}
+
+			.image-caption {
+				margin-top: 10px;
+				line-height: 26px;
+			}
+		}
+	}
+	
+}

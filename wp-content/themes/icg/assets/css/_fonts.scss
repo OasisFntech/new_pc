@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Pembroke';
+    src: url('../fonts/Pembroke-Regular.woff2') format('woff2'),
+        url('../fonts/Pembroke-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pembroke';
+    src: url('../fonts/Pembroke-Medium.woff2') format('woff2'),
+        url('../fonts/Pembroke-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pembroke';
+    src: url('../fonts/Pembroke-Italic.woff2') format('woff2'),
+        url('../fonts/Pembroke-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Pembroke';
+    src: url('../fonts/Pembroke-Bold.woff2') format('woff2'),
+        url('../fonts/Pembroke-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}

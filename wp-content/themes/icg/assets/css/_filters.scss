@@ -1,0 +1,176 @@
+.tax-filter,
+.office-filter {
+	width: 100%;
+	font-size: 13px;
+	line-height: 22px;
+	position: relative;
+
+	@include media-breakpoint-down(md) {
+		font-weight: 700;		
+	}
+
+	@include media-breakpoint-up(md) {
+		max-width: 325px;
+		font-size: 15px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		max-width: 380px;
+	}
+
+	&:not(:first-child) {
+		@include media-breakpoint-down(md) {
+			margin-top: 35px;
+		}
+
+		@include media-breakpoint-up(md) {
+			margin-left: 28px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-left: 50px;
+		}
+	}
+
+	label {
+		margin-right: 24px;
+
+		@include media-breakpoint-down(md) {
+			opacity: .5;
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-right: 30px;
+		}
+	}
+
+	.filter-trigger {
+		padding-bottom: 10px;
+		border-bottom: 1px solid $grey;
+		cursor: pointer;
+		background-image: url('../images/arrow-down.svg');
+		background-repeat: no-repeat;
+		background-position: right 0px center;
+		background-size: 12px auto;
+
+		&.active {
+			background-image: url('../images/arrow-up.svg');
+		}
+
+		.current-filter-items {
+			width: calc(100% - 85px);
+		    display: inline-block;
+		    position: absolute;
+		    bottom: 10px;
+		    right: 0px;
+
+		    @include media-breakpoint-down(md) {
+		    	opacity: .5;	
+		    }
+		}
+	}
+
+	.filter-options {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		display: none;
+
+		&.city {
+			li {
+				&:not(.placeholder) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		border: 1px solid $grey;
+		margin-top: 10px;
+		border-bottom: none;
+		max-height: 240px;
+		overflow: scroll;
+
+		li {
+			padding: 16px 20px;
+			font-weight: 700;
+			cursor: pointer;
+			background: $white;
+			transition: background .2s linear;
+			position: relative;
+			margin-top: -1px;
+
+			&:first-child {
+				border-top: 1px solid transparent;
+			}
+
+			&:not(:first-child) {
+				border-top: 1px solid $grey;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				right: 24px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 7px;
+				height: 7px;
+				background: $white;
+				border-radius: 100%;
+				opacity: 0;
+				transition: opacity .2s linear;
+			}
+
+			span {
+				opacity: .5;
+				color: $black;
+				transition: color .2s linear, opacity .2s linear;
+			}
+
+			&:hover, &.active {
+				background: $blue;
+				border-top: 1px solid $blue;
+
+				span {
+					color: $white;
+					opacity: 1;
+				}
+
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.filter-actions {
+		input {
+			width: 50%;
+			height: 55px;
+			cursor: pointer;
+			background: #f1f1f1;
+			font-size: 15px;
+			color: $black $i;
+
+			&.clear {
+				background-image: url('../images/cross-icon.svg');
+			    background-repeat: no-repeat;
+    			background-position: center right 33%;
+    			background-size: 10px auto;
+			}
+
+			&[type="submit"] {
+				border: 1px solid rgba(0,0,0,0.3);
+
+				&:first-child {
+					border-right: none;
+				}
+			}
+		}
+	}
+}

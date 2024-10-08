@@ -1,0 +1,7 @@
+.icg-related_people_module {
+	margin: 120px 0px;
+
+	@include media-breakpoint-up(lg) {
+		margin: 150px 0px;	
+	}
+}

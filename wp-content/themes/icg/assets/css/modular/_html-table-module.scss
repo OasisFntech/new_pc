@@ -1,0 +1,29 @@
+.icg-html_table_module {
+	margin: 120px 0px;
+
+	@include media-breakpoint-up(lg) {
+		margin: 150px 0px;	
+	}
+
+	thead {
+		font-weight: bold;
+	}
+
+	h2 {
+		color: $green;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 31px;
+		margin: 50px 0px 20px;
+
+		@include media-breakpoint-up(md) {
+			font-size: 28px;
+			line-height: 36px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			font-size: 42px;
+			line-height: 65px;
+		}
+	}
+}

@@ -1,0 +1,116 @@
+.lightboxModal {
+	background: rgba(1, 34, 38, .9);
+    backdrop-filter: blur(10px);
+    background-blend-mode: multiply;
+
+	.modal-dialog {
+		max-width: 345px;
+
+		@include media-breakpoint-down(xl) {
+			margin-left: auto;
+    		margin-right: auto;
+		}
+
+		@include media-breakpoint-up(md) {
+			max-width: 645px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			max-width: 850px;
+		}
+	}
+
+	.modal-content {
+		background: $white;
+		border: none;
+		border-radius: 0px;
+	}
+
+	.modal-header {
+		border-bottom: none;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		padding: 30px 40px;
+		display: block;
+
+		@include media-breakpoint-up(md) {
+			padding: 37px 40px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding: 50px 0px;
+		}
+
+		.btn-close {
+			position: absolute;
+    		right: 0px;
+    		top: 0px;
+    		margin: 0;
+   			padding: 20px;
+    		line-height: 0;
+    		cursor: pointer;
+		}
+	}
+
+	.modal-body {
+		padding: 0 26px 0px 20px;
+		line-height: 26px;
+
+		@include media-breakpoint-up(md) {
+			padding: 0 26px 0px 80px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding: 0px 30px 0px 125px;
+		}
+
+		h4 {
+			margin-bottom: 30px;
+			color: $green;
+			font-size: 24px;
+			line-height: 30px;
+		}
+
+		h5 {
+			font-size: 17px;
+			line-height: 26px;
+			color: $green;
+			margin-top: 60px;
+			margin-bottom: 10px;
+		}
+
+		p {
+			margin-bottom: 30px;
+		}
+
+		.content-wrapper {
+		    height: 380px;
+		    margin-bottom: 30px;
+		    overflow-y: auto;
+		    padding-bottom: 40px;
+		    padding-right: 50px;
+		    position: relative;
+		    z-index: 1;
+
+		    @include media-breakpoint-up(lg) {
+		    	padding-right: 90px;
+		    }
+		}
+
+		.content-wrapper::-webkit-scrollbar {
+			width: 8px;
+			height: 375px;
+			border-radius: 10px;
+			background: #D9D9D9;
+		}
+
+		.content-wrapper::-webkit-scrollbar-button {
+			height: 100px;
+		}
+
+		.content-wrapper::-webkit-scrollbar-thumb {
+			background: linear-gradient(180deg, #3A4BFB 0%, #003B49 100%);
+			border-radius: 10px;
+		}
+	}
+}

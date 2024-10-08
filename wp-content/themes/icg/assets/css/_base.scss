@@ -1,0 +1,339 @@
+/*********************
+GENERAL STYLES
+*********************/
+
+$i: !important;
+
+html.fixed,
+body.fixed {
+	position: fixed;
+  	overflow: hidden;
+  	width: 100%;
+}
+
+html.hide-overflow,
+body.hide-overflow {
+	overflow: hidden;
+}
+
+.regular-font {
+	font-weight: 400;
+}
+
+.body1-text {
+	font-size: 20px;
+	line-height: 28px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 24px;
+		line-height: 38px;
+	}
+}
+
+.loading-container {
+	margin: 50px auto;
+}
+
+.text-upper {
+	text-transform: uppercase;
+}
+
+.modal-backdrop.show {
+	opacity: .1;
+}
+
+.objfit {
+    bottom: 0;
+    display: block;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+sub, sup {
+	font-size: 75%;
+}
+
+sub {
+	vertical-align: sub;
+}
+
+sup {
+	vertical-align: super;
+}
+
+body {
+	font-family: 'Pembroke', sans-serif;
+	font-weight: 400;
+	font-size: 17px;
+	color: $black;
+  	-webkit-font-smoothing: antialiased;
+
+	.container-fluid {
+		max-width: 1440px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	&.is-sub-page.top-gradient {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			height: 330px;
+			background: linear-gradient(180deg, rgba(0, 59, 73, 0.2) 0%, rgba(0, 59, 73, 0) 100%);
+		}
+	}
+
+	&.blur {
+		#site-content,
+		#site-footer,
+		#stock-module {
+			transition: filter .2s linear;
+			// transition-delay: .55s;
+			filter: blur(10px);
+		}
+
+		#site-header {
+			color: $white $i;
+
+			&__right {
+				.menu {
+					li {
+						a {
+							&:hover, &.active, &.current-menu-item {
+								background: $white $i;
+								color: $blue $i;
+							}
+						}
+					}
+				}
+			}
+
+			.logo {
+				svg {
+					path {
+						fill: $white $i;
+					}
+				}
+			}
+
+			#utility-menu__wrapper {
+				.search-trigger {
+					svg {
+						circle, path {
+							stroke: $white $i;
+						}
+					}
+				}	
+			} 
+		}
+	}
+
+	&.modal-open:not(.search-active) {
+		#site-content,
+		#site-footer,
+		#stock-module,
+		#site-header {
+			transition: filter .2s linear;
+			filter: blur(10px);
+		}
+	}
+
+	&.with-intro-module {
+		overflow: hidden;
+		position: fixed;
+		width: 100%;
+	}
+
+	&.single-post,
+	&.single-people,
+	&.is-sub-page {
+
+		#site-header {
+			color: $black;
+
+			&__right {
+				.menu {
+					li {
+						a {
+							&:hover, &.active, &.current-menu-item {
+								background: $blue;
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+
+			.logo {
+				svg {
+					path {
+						fill: $green;
+					}
+				}
+			}
+
+			.icg-dropdown-menu {
+				color: $white;
+			}
+
+			#utility-menu__wrapper {
+				.search-trigger {
+					svg {
+						circle, path {
+							stroke: $black;
+						}
+					}
+				}	
+			}
+
+			.menu-icon {
+				a {
+					color: $black;
+				}
+			}
+		}
+	}
+}
+
+#body-overlay {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(1, 18, 22, .9);
+	opacity: 0;
+	transition: opacity .2s linear;
+	mix-blend-mode: multiply;
+	// transition-delay: .35s;
+	// backdrop-filter: blur(20px);
+
+	&.active {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+#site-content {
+	filter: blur(0px);
+	position: relative;
+	display: block;
+}
+
+.g-flex {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-weight: 500;
+}
+
+ul.menu,
+ul.sub-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&:not(.vertical) {
+		display: flex;
+	}
+
+	li {
+		a {
+			text-decoration: none;
+			position: relative;
+		}
+	}
+}
+
+a {
+	color: inherit;
+	transition: color .2s linear;
+
+	&:hover, &:active, &:focus, &:active:hover, &:active:focus {
+		color: $blue;
+	}
+
+	&.no-underline {
+		text-decoration: none;
+	}
+
+	&.no-hover {
+		&:hover, &:active, &:focus, &:active:hover, &:active:focus {
+			color: inherit;
+		}		
+	}
+}
+
+
+h1, .h1 {
+	font-size: 36px;
+	line-height: 41px;
+
+	@include media-breakpoint-up(md) {
+		font-size: 50px;
+		line-height: 57px;		
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: 64px;
+		line-height: 72px;
+	}
+}
+
+h2, .h2 {
+	font-size: 32px;
+	line-height: 44px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 48px;
+		line-height: 55px;
+	}
+}
+
+h3, .h3 {
+	font-size: 26px;
+	line-height: 35px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 24px;
+		line-height: 31px;
+	}
+}
+
+h4, .h4 {
+	font-size: 20px;
+	line-height: 25px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 26px;
+		line-height: 32px;
+	}
+}
+
+h5, .h5 {
+	font-size: 16px;
+	line-height: 19px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 22px;
+		line-height: 24px;
+	}
+}
+
+h6, .h6 {
+	font-size: 13px;
+	line-height: 24px;
+}

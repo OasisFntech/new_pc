@@ -1,0 +1,23 @@
+#back-to-top {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity .2s linear, visibility .2s linear;
+
+	@include media-breakpoint-up(md) {
+		right: 45px;	
+	}
+
+	@include media-breakpoint-up(lg) {
+		right: 70px;	
+	}
+
+	&.show-it {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+}

@@ -1,0 +1,496 @@
+.icg-accordion_module {
+	margin: 120px 0px;
+
+	@include media-breakpoint-up(lg) {
+		margin: 180px 0px;		
+	}
+
+	h2 {
+		font-weight: 400;
+		color: $green;
+		font-size: 28px;
+		line-height: 28px;
+		margin-bottom: 30px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 42px;
+			line-height: 47px;
+			margin-bottom: 40px;
+		}
+	}
+
+	.horizontal-accordion-menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-size: 20px;
+		line-height: 20px;
+		font-weight: 500;
+		color: $white;
+
+		@include media-breakpoint-up(md) {
+			font-size: 30px;
+			line-height: 30px;
+		}
+
+		&.active-1 {
+			li {
+				&:nth-child(1) {
+					background: $accordion-green1;
+				}
+
+				&:nth-child(2) {
+					background: $accordion-green2;
+				}
+
+				&:nth-child(3) {
+					background: $accordion-green3;
+				}
+
+				&:nth-child(4) {
+					background: $accordion-green4;
+				}
+			}
+		}
+
+		&.active-2 {
+			li {
+
+				&:nth-child(1) {
+					background: $accordion-green2;
+				}
+
+				&:nth-child(2) {
+					background: $accordion-green1;
+				}
+
+				&:nth-child(3) {
+					background: $accordion-green3;
+				}
+
+				&:nth-child(4) {
+					background: $accordion-green4;
+				}
+			}
+		}
+
+		&.active-3 {
+			li {
+
+				&:nth-child(1) {
+					background: $accordion-green3;
+				}
+
+				&:nth-child(2) {
+					background: $accordion-green2;
+				}
+
+				&:nth-child(3) {
+					background: $accordion-green1;
+				}
+
+				&:nth-child(4) {
+					background: $accordion-green4;
+				}
+			}
+		}
+
+
+		&.active-4 {
+			li {
+
+				&:nth-child(1) {
+					background: $accordion-green4;
+				}
+
+				&:nth-child(2) {
+					background: $accordion-green3;
+				}
+
+				&:nth-child(3) {
+					background: $accordion-green2;
+				}
+
+				&:nth-child(4) {
+					background: $accordion-green1;
+				}
+			}
+		}
+
+		&.count-3 {
+			li {
+				@include media-breakpoint-down(lg) {
+					width: calc(100% / 3);
+				}
+			}
+		}
+
+		&.count-2 {
+			li {
+				@include media-breakpoint-down(lg) {
+					width: calc(100% / 2);
+				}
+			}
+		}
+
+		&.count-1 {
+			li {
+				@include media-breakpoint-down(lg) {
+					width: 100%;
+				}
+			}
+		}
+
+		li {
+			width: 25%;
+			height: 80px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			position: relative;
+
+			&.active {
+				&:before {
+					content: '';
+					width: 6px;
+					height: 6px;
+					border-radius: 100%;
+					background: $blue;
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					top: 20px;
+
+					@include media-breakpoint-up(md) {
+						top: 15px;						
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+.horizontal-accordion {
+	color: $white;
+	background: $accordion-green1;
+
+	&.count-1 {
+		.accordion-group {
+			&.active {
+				width: 100%;
+			}
+		}
+	}
+
+	&.count-2 {
+		.accordion-group {
+			&.active {
+				@include media-breakpoint-up(lg) {
+					width: calc(100% - 100px);
+				}
+			}
+		}
+	}
+
+	&.count-3 {
+		.accordion-group {
+			&.active {
+				@include media-breakpoint-up(lg) {
+					width: calc(100% - 200px);
+				}
+			}
+		}
+	}
+
+	&.active-1 {
+		.accordion-group {
+
+			&:nth-child(1) {
+				background: $accordion-green1;
+			}
+
+			&:nth-child(2) {
+				background: $accordion-green2;
+			}
+
+			&:nth-child(3) {
+				background: $accordion-green3;
+			}
+
+			&:nth-child(4) {
+				background: $accordion-green4;
+			}
+		}
+	}
+
+	&.active-2 {
+		.accordion-group {
+
+			&:nth-child(1) {
+				background: $accordion-green2;
+			}
+
+			&:nth-child(2) {
+				background: $accordion-green1;
+			}
+
+			&:nth-child(3) {
+				background: $accordion-green3;
+			}
+
+			&:nth-child(4) {
+				background: $accordion-green4;
+			}
+		}
+	}
+
+	&.active-3 {
+		.accordion-group {
+
+			&:nth-child(1) {
+				background: $accordion-green3;
+			}
+
+			&:nth-child(2) {
+				background: $accordion-green2;
+			}
+
+			&:nth-child(3) {
+				background: $accordion-green1;
+			}
+
+			&:nth-child(4) {
+				background: $accordion-green4;
+			}
+		}
+	}
+
+
+	&.active-4 {
+		.accordion-group {
+
+			&:nth-child(1) {
+				background: $accordion-green4;
+			}
+
+			&:nth-child(2) {
+				background: $accordion-green3;
+			}
+
+			&:nth-child(3) {
+				background: $accordion-green2;
+			}
+
+			&:nth-child(4) {
+				background: $accordion-green1;
+			}
+		}
+	}
+
+
+	
+	.accordion-group {
+		overflow: hidden;
+
+		@include media-breakpoint-up(lg) {
+			width: 100px;
+			transition: all .3s linear;
+			transition-delay: .2s;
+		}
+
+		&.active {
+			width: 100%;
+			min-height: 550px;
+
+			@include media-breakpoint-up(lg) {
+				width: calc(100% - 300px);
+			}
+
+			.accordion-title {
+
+				h3 {
+					&:after {
+						content: '';
+						width: 8px;
+						height: 8px;
+						border-radius: 100%;
+						background: $blue;
+						position: absolute;
+						left: 50%;
+						transform: translateX(-50%);
+						bottom: -20px;
+					}
+				}
+			}
+		}
+
+		.accordion-title {
+			width: 100px;
+			height: 100%;
+			position: relative;
+			cursor: pointer;
+
+			h3 {
+				position: absolute;
+			    writing-mode: vertical-lr;
+			    left: 50%;
+			    transform: translateX(-50%) scale(-1);
+			    bottom: 38px;
+			    font-size: 30px;
+			    line-height: 30px;
+			}
+
+			.number {
+				font-size: 30px;
+				line-height: 30px;
+				position: absolute;
+				top: 38px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-weight: 500;
+			}
+		}
+
+		.accordion-content {
+			height: 100%;
+
+			@include media-breakpoint-up(lg) {
+				width: calc(100% - 100px);
+				transition: all .3s linear;
+			}
+
+			h3 {
+				font-size: 24px;
+				line-height: 24px;
+				font-weight: 400;
+				margin-bottom: 35px;
+
+				@include media-breakpoint-up(md) {
+					margin-bottom: 40px;					
+				}
+			}
+
+			&__wrapper {
+				padding: 40px 30px;
+				opacity: 0;
+				visibility: hidden;
+
+				@include media-breakpoint-up(md) {
+					padding: 145px 60px;
+				}
+
+				@include media-breakpoint-up(lg) {
+					padding: 140px 20px 140px;
+					transition: opacity .2s linear, visibility .2s linear;
+				}
+
+				@include media-breakpoint-up(xl) {
+					padding: 140px 125px 140px 80px;
+				}
+
+				&.moveaway {
+					@include media-breakpoint-down(lg) {
+						display: none;
+					}
+
+					@include media-breakpoint-up(lg) {
+						position: absolute;
+						top: -9999px;
+						left: -9999px;	
+					}
+				}
+
+				&.active {
+					position: relative;
+					top: auto;
+					left: auto;
+					opacity: 1;
+					visibility: visible;
+				}
+
+				.accordion-people {
+					margin-bottom: 55px;
+
+					@include media-breakpoint-up(lg) {
+						margin-bottom: 35px;	
+					}
+
+					@include media-breakpoint-down(lg) {
+						flex-direction: column;
+					}
+
+					article {
+						display: flex;
+
+						@include media-breakpoint-up(md) {
+							width: calc((100% - 20px) / 2);	
+						}
+
+						@include media-breakpoint-up(xl) {
+							width: calc((100% - 60px) / 2);
+						}
+
+						&:nth-child(2) {
+							@include media-breakpoint-down(lg) {
+								margin-top: 40px;
+							}
+
+							@include media-breakpoint-up(lg) {
+								margin-left: 20px;	
+							}
+
+							@include media-breakpoint-up(xl) {
+								margin-left: 60px;
+							}
+						}
+
+						.image-container {
+							flex: 0 70px;
+
+							.image-wrapper {
+								height: 60px;
+								padding-top: 0px;
+							}
+						}
+
+						.text-container {
+							flex: 1;
+							padding-top: 0px;
+							padding-left: 25px;
+
+							.post-title {
+								margin: 0;
+								color: $white;
+							}
+
+							.department,
+							.location,
+							.linkedin-link {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+			.description {
+				line-height: 26px;
+			}
+
+			.amount {
+				font-size: 24px;
+				line-height: 26px;
+				margin-top: 30px;
+				font-weight: 700;
+			}
+
+			.cta {
+	    		margin-top: 55px;
+	    		color: inherit;
+	    		background-image: url('../images/link-arrow.svg');
+	    	}
+		}
+	}
+}

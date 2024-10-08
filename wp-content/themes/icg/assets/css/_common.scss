@@ -1,0 +1,286 @@
+.screen-reader-text {
+  	border: 0;
+  	clip: rect(1px, 1px, 1px, 1px);
+  	clip-path: inset(50%);
+  	height: 1px;
+  	margin: -1px;
+  	overflow: hidden;
+  	padding: 0;
+  	position: absolute;
+  	width: 1px;
+  	word-wrap: normal !important;
+}
+
+img.switch-image {
+	opacity: 0;
+	transition: opacity .2s ease-in;
+}
+
+.arrow-link {
+	padding-right: 26px;
+	background-image: url('../images/link-arrow.svg');
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 12px;
+}
+
+.icg-wrapper {
+	@include media-breakpoint-up(md) {
+		padding: 0 25px;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		padding: 0 80px;
+	}
+}
+
+div.aligncenter,
+div.alignnone {
+	margin: 50px auto;
+}
+
+img {
+
+	&.aligncenter, &.alignlegt, &.alignnone, &.alignright {
+		@include media-breakpoint-up(md) {
+			max-width: 100% !important;
+			height: auto;
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 100vw;
+			height: auto;
+		}
+		
+
+		> img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&.aligncenter, &.alignnone {
+		margin: 50px auto 30px;
+	}
+
+	&.aligncenter {
+		display: block;
+	}
+
+	&.aligncenter {
+		@include media-breakpoint-down(lg) {
+			margin: 50px 0px;
+		}
+
+		.wp-caption-text {
+			@include media-breakpoint-down(lg) {
+				padding: 0px 30px;
+			}
+		}
+	}
+
+	&.alignleft {
+		float: left;
+		
+		@include media-breakpoint-down(lg) {
+			margin: 50px 0px;
+		    float: none;
+		    display: block;
+		}
+
+		@include media-breakpoint-up(md) {
+			margin-top: 10px;
+			margin-right: 50px;
+			margin-bottom: 50px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-right: 60px;
+			margin-bottom: 60px;
+		}
+	}
+
+	&.alignright {
+		float: right;
+
+		@include media-breakpoint-down(lg) {
+			margin: 50px 0px;
+		    float: none;
+		    display: block;
+		}
+
+		@include media-breakpoint-up(md) {
+			margin-top: 10px;
+			margin-left: 50px;
+			margin-bottom: 50px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-left: 60px;
+			margin-bottom: 60px;
+		}
+	}
+
+}
+
+div.wp-caption {
+	width: 100% $i;
+	max-width: 100%;
+	
+	&.aligncenter {
+		margin: 40px 0px;
+	}
+
+	&.alignright {
+		float: right;
+		margin-left: 15px;
+	}
+
+	&.alignleft {
+		float: left;
+		margin-right: 15px;
+	}
+
+	img {
+	    margin-top: 0;
+	    margin-bottom: 0;
+	    max-width: 100%;
+	    height: auto;
+	}
+
+	.wp-caption-text {
+	    font-size: 15px;
+	    line-height: 20px;
+	    font-weight: normal;
+	    margin-top: 14px;
+	    color: #848080;
+	    position: relative;
+	}
+}
+
+
+.btn,
+.wp-block-file a,
+.wp-block-file .wp-block-file__button {
+    border-radius: 15px;
+    display: inline-block;
+    background: $blue;
+    color: $white;
+    transition: background .2s linear;
+    outline: none;
+    font-size: 13px;
+    line-height: 1;
+    padding: 8px 38px 8px 14px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    background-image: url('../images/link-arrow.svg');
+    background-size: 12px;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    border: 1px solid $blue;
+
+    @include media-breakpoint-up(md) {
+    	font-size: 15px;
+    	padding: 7px 38px 8px 14px;
+    }
+
+    &.no-arrow {
+    	padding: 7px 14px 8px;
+    	background-image: none $i;
+    }
+
+    &:active {
+    	box-shadow: none;
+    }
+
+    &.external-link {
+    	background-image: url('../images/link-arrow-external.svg');
+    	background-size: 15px;
+    	background-position: right 7px center;
+    	background-repeat: no-repeat;
+
+    	@include media-breakpoint-up(lg) {
+    		background-size: 17px;
+    	}
+
+    	&:hover, &:active, &:focus, &:active:hover, &:active:focus {
+    		background-image: url('../images/link-arrow-external-blue.svg');
+    		background-size: 15px;
+    		background-position: right 7px center;
+
+    		@include media-breakpoint-up(lg) {
+    			background-size: 17px;
+    		}
+    	}
+    }
+
+    &.btn-transparent {
+    	background: transparent;
+    	padding-top: 0;
+    	padding-bottom: 0;
+    	padding-left: 0;
+    	padding-right: 30px;
+    	border: none;
+    	color: $black;
+    	background-image: url('../images/link-arrow-blue.svg');
+    	background-repeat: no-repeat;
+    	background-size: 12px;
+    	background-position: right 10px center;
+
+    	&:hover, &:active, &:focus, &:active:hover, &:active:focus {
+    		background-color: transparent;
+    	}
+
+    	&.external-link {
+    		background-image: url('../images/link-arrow-external-blue.svg');
+    		background-size: 15px;
+    		background-position: right 7px center;
+
+    		@include media-breakpoint-up(lg) {
+    			background-size: 17px;
+    		}
+    	}
+    }
+
+    &.btn-scroll {
+    	padding: 7px 36px 8px;
+    	background-image: none;
+
+    	&:before,
+    	&:after {
+    		content: '';
+    		position: absolute;
+    		left: 14px;
+    		top: 50%;
+    		transform: rotate(90deg) translateX(-50%);
+    		width: 12px;
+    		height: 12px;
+    		background-image: url('../images/link-arrow.svg');
+    	}
+
+    	&:after {
+    		right: 14px;
+    		left: auto;
+    	}
+
+    	&:hover, &:active, &:focus, &:active:hover, &:active:focus {
+    		background-image: none;
+
+    		&:before,
+    		&:after {
+    			background-image: url('../images/link-arrow-blue.svg');
+    		}
+    	}
+    }
+
+    &:hover, &:active, &:focus, &:active:hover, &:active:focus {
+    	background: $white;
+    	color: $blue;
+    	outline: none;
+    	background-image: url('../images/link-arrow-blue.svg');
+    	background-size: 12px;
+	    background-position: right 10px center;
+	    background-repeat: no-repeat;
+    }
+}

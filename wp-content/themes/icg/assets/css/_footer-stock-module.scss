@@ -1,0 +1,82 @@
+#footer-stock-module {
+
+	@include media-breakpoint-down(md) {
+		margin-bottom: 60px;
+	}
+
+	@include media-breakpoint-up(md) {
+		padding-top: 25px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+#footer-stock__price {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	padding-top: 20px;
+	border-top: 1px solid #ffffff;
+	font-family: 'Pembroke', sans-serif;
+	letter-spacing: -0.01em;
+
+	@include media-breakpoint-up(lg) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&-right {
+		margin-top: 10px;
+
+		@include media-breakpoint-up(lg) {
+			padding-left: 30px;	
+			margin-top: 0px;
+		}
+	}
+
+	.exchange {
+		font-weight: 400;
+		font-size: 26px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 30px;
+		}
+	}
+
+	.stock-label, .date {
+		font-weight: 400;
+		font-size: 15px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 18px;
+		}
+	}
+
+	.stock-label {
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+
+	.date {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.percentage {
+		font-weight: 400;
+		margin-bottom: 5px;
+		font-size: 15px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 18px;
+		}
+	}
+
+	.share-price {
+		font-size: 34px;
+		font-weight: 400;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 40px;	
+		}
+	}
+}

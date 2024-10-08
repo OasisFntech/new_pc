@@ -1,0 +1,159 @@
+#site-footer {
+	background: $green;
+	color: $white;
+	filter: blur(0px);
+
+	&__wrapper {
+		padding: 50px 0px 65px;
+
+		@include media-breakpoint-up(md) {
+			padding: 50px 25px 75px;	
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding: 90px 25px 105px;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			padding: 90px 70px 105px;
+		}
+	}
+
+	&__container {
+		position: relative;
+	}
+
+	.title {
+		font-size: 20px;
+		line-height: 20px;
+		margin: 0;
+		padding: 15px 0px;
+		position: relative;
+
+		@include media-breakpoint-down(lg) {
+			font-weight: 400;
+		}
+
+		@include media-breakpoint-up(lg) {
+			font-size: 35px;
+			line-height: 35px;
+			padding: 24px 0px;
+		}
+	}
+
+	.footer-columns {
+		justify-content: space-between;
+
+		@include media-breakpoint-between(md,xl) {
+			margin-bottom: 120px;
+		}
+	}
+
+	.footer-column {
+		width: 50%;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 60px;
+		}
+
+		@include media-breakpoint-up(md) {
+			width: calc((100% - 60px) / 4);
+			max-width: 155px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			max-width: 250px;
+		}
+
+		&:not(:last-child) {
+			@include media-breakpoint-up(md) {
+				margin-right: 20px;
+			}
+		}
+
+		&:first-child {
+
+			.title {
+
+				&:before,
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: calc(100vw - 40px);
+					height: 1px;
+					background: $white;
+
+					@include media-breakpoint-up(md) {
+						width: calc(100vw - 90px);
+					}
+
+					@include media-breakpoint-up(xxl) {
+						width: 1260px;
+					}
+				}
+
+				&:after {
+					top: auto;
+					bottom: 0;
+				}
+			}
+		}
+
+		&:nth-child(3) {
+
+			.title {
+				
+				&:before,
+				&:after {
+					@include media-breakpoint-down(md) {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: calc(100vw - 40px);
+						height: 1px;
+						background: $white;
+					}
+				}
+
+				&:after {
+					top: auto;
+					bottom: 0;
+				}
+			}
+		}
+	}
+
+	.menu {
+		font-size: 12px;
+		line-height: 20px;
+		flex-direction: column;
+		margin-top: 30px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 18px;
+			line-height: 35px;	
+		}
+
+		li {
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.copyright {
+		font-size: 12px;
+
+		@include media-breakpoint-up(md) {
+			margin-top: 50px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			font-size: 15px;
+			margin-top: 70px;
+		}
+	}
+}

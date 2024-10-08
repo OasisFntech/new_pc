@@ -1,0 +1,125 @@
+.icg-contact_form_module {
+	margin: 165px 0px 120px;
+
+	@include media-breakpoint-up(lg) {
+		margin: 230px 0px 180px;
+	}
+
+	.content-wrapper {
+		max-width: 920px;
+	}
+
+	h2 {
+		font-size: 35px;
+		line-height: 28px;
+		font-weight: 400;
+		color: $green;
+		margin-bottom: 20px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 70px;
+			line-height: 65px;
+			margin-bottom: 30px;
+		}
+	}
+
+	p.content {
+		font-size: 20px;
+		line-height: 28px;
+		max-width: 500px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 24px;
+			line-height: 38px;
+			max-width: 810px;
+		}
+	}
+
+	div.wpcf7 {
+		margin-top: 60px;
+
+		@include media-breakpoint-up(md) {
+			margin-top: 80px;
+		}
+	}
+
+	.wpcf7 form.sent .wpcf7-response-output {
+		display: none;
+	}
+
+	.wpcf7-form {
+
+		.icg-input {
+			width: 100%;
+			margin-bottom: 35px;
+			font-size: 13px;
+			line-height: 22px;
+			font-weight: 700;
+			border: none;
+			border-bottom: 1px solid $grey;
+			padding-bottom: 10px;
+
+			@include media-breakpoint-up(md) {
+				font-size: 15px;
+				width: calc((100% - 40px) / 2);
+				margin-bottom: 60px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: calc((100% - 55px) / 2);
+			}
+
+			&::placeholder {
+				color: $black;
+			}
+
+			&.wpcf7-not-valid {
+				background: transparent $i;
+				color: red;
+
+				&::placeholder {
+					color: red;
+				}
+			}
+		}
+
+		input[type="submit"] {
+			width: 95px;
+			cursor: pointer;
+
+			@include media-breakpoint-down(md) {
+			    margin-left: auto;
+			    margin-right: auto;
+			    display: block;
+			    margin-top: 30px;
+			}
+		}
+
+		.icg-input-margin {
+			@include media-breakpoint-up(md) {
+				margin-left: 40px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				margin-left: 55px;	
+			}
+		}
+
+		.icg-input-full {
+			width: 100%;
+		}
+
+		.wpcf7-spinner {
+			margin-top: 0px;
+			margin-left: 10px;
+			margin-bottom: -5px;
+		}
+
+		.wpcf7-response-output {
+			@include media-breakpoint-up(md) {
+				margin-top: -25px $i;
+    			margin-left: 120px $i;	
+			}
+		}
+	}
+}
