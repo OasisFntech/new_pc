@@ -440,6 +440,11 @@
       type="text/javascript"
       src="./wp-content/themes/icg/assets/js/vendor-libs/frame-manager.js"
     ></script>
+      <style>
+          .language-options {
+              margin-left: auto;
+          }
+      </style>
   </head>
 
   <body
@@ -503,6 +508,7 @@
         const menuConfig = [
             {
                 title: "Clients",
+                key: 'home',
                 link: "/",
                 className: "current-menu-item",
                 dropdown: false,
@@ -551,6 +557,7 @@
                 a.textContent = item.title;
                 if (item.className) a.classList.add(item.className);
                 if (item.dropdownId) a.setAttribute('data-dropdown', item.dropdownId);
+				a.dataset.lang = item.key
 
                 li.appendChild(a);
                 menuContainer.appendChild(li);
@@ -1664,6 +1671,18 @@
           userAgent.indexOf("Edge/") > -1
         );
       }
+    </script>
+
+    <script>
+        const locale = new URLSearchParams(window.location.search).get('lang') || 'en'
+        fetch('/wp-content/lang.json').then(res => res.json()).then(lang => {
+			Object.entries(lang[locale]).forEach(e => {
+				const [ key, val ] = e
+                document.querySelectorAll(`[data-lang="${key}"]`).forEach(dom => {
+					dom.innerHTML = val
+                })
+            })
+        })
     </script>
   </body>
 </html>
