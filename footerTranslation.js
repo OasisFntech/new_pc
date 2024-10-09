@@ -1,0 +1,113 @@
+const footerTranslations = {
+    en: {
+        policies: "Policies",
+        resources: "Resources",
+        related: "Related",
+        connect: "Connect",
+        policiesItems: [
+            "Policies & disclosures",
+            "Cookies",
+            "Health and safety",
+            "Privacy",
+            "Responsible Investing Policy",
+            "US Consumer Privacy Notice",
+            "Website accessibility",
+            "Website terms of use",
+        ],
+        resourcesItems: [
+            "Complaints Policy",
+            "Gender Pay Gap",
+            "Modern slavery statements",
+            "News & insights",
+            "Regulatory disclosures",
+            "ISO-27001 Certified",
+        ],
+        relatedItems: [
+            "ICG Enterprise Trust",
+            "ICG Longbow SSUP",
+        ],
+        connectItems: [
+            "Contact us",
+            "Email subscriptions",
+            "LinkedIn",
+            "X",
+            "Instagram",
+            "Vimeo",
+            "Job opportunities",
+        ]
+    },
+    pt: {
+        policies: "Políticas",
+        resources: "Recursos",
+        related: "Relacionados",
+        connect: "Conectar",
+        policiesItems: [
+            "Políticas e divulgações",
+            "Cookies",
+            "Saúde e segurança",
+            "Privacidade",
+            "Política de Investimento Responsável",
+            "Aviso de Privacidade do Consumidor dos EUA",
+            "Acessibilidade do site",
+            "Termos de uso do site",
+        ],
+        resourcesItems: [
+            "Política de Reclamações",
+            "Diferença Salarial de Gênero",
+            "Declarações de Escravidão Moderna",
+            "Notícias e insights",
+            "Divulgações Regulamentares",
+            "Certificado ISO-27001",
+        ],
+        relatedItems: [
+            "ICG Enterprise Trust",
+            "ICG Longbow SSUP",
+        ],
+        connectItems: [
+            "Contate-nos",
+            "Inscrições por e-mail",
+            "LinkedIn",
+            "X",
+            "Instagram",
+            "Vimeo",
+            "Oportunidades de trabalho",
+        ]
+    },
+    id: {
+        policies: "Kebijakan",
+        resources: "Sumber Daya",
+        related: "Terkait",
+        connect: "Terhubung",
+        policiesItems: [
+            "Kebijakan & pengungkapan",
+            "Cookies",
+            "Kesehatan dan keselamatan",
+            "Privasi",
+            "Kebijakan Investasi yang Bertanggung Jawab",
+            "Pemberitahuan Privasi Konsumen AS",
+            "Aksesibilitas situs web",
+            "Ketentuan penggunaan situs web",
+        ],
+        resourcesItems: [
+            "Kebijakan Keluhan",
+            "Kesenjangan Upah Gender",
+            "Pernyataan perbudakan modern",
+            "Berita & wawasan",
+            "Pengungkapan regulasi",
+            "Bersertifikat ISO-27001",
+        ],
+        relatedItems: [
+            "ICG Enterprise Trust",
+            "ICG Longbow SSUP",
+        ],
+        connectItems: [
+            "Hubungi kami",
+            "Langganan email",
+            "LinkedIn",
+            "X",
+            "Instagram",
+            "Vimeo",
+            "Peluang kerja",
+        ]
+    }
+};
