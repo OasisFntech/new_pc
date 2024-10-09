@@ -414,6 +414,12 @@
       type="text/javascript"
       src="../wp-content/themes/icg/assets/js/vendor-libs/frame-manager.js"
     ></script>
+    <script
+            src="../translation.js"
+            type="text/javascript"
+    >
+
+    </script>
     <style></style>
 
     <noscript>
@@ -466,591 +472,19 @@
                         </div>
 
                         <div id="site-header__right">
-                            <ul class="menu header-menu d-none d-lg-flex">
-                                <li>
-                                    <a href="/" class="">Clients</a>
-                                </li>
-                                <li>
-                                    <a href="/who-we-are/" class="dropdown" data-dropdown="#dropdown-who-we-are">Who
-                                        we are</a>
-                                </li>
-                                <li>
-                                    <a href="/what-we-do/" class="dropdown" data-dropdown="#dropdown-what-we-do">What
-                                        we do</a>
-                                </li>
-                                <li>
-                                    <a href="/sustainability/" class="dropdown current-menu-item"
-                                        data-dropdown="#dropdown-sustainability">Sustainability</a>
-                                </li>
-                                <li>
-                                    <a href="/people-and-careers/" class="dropdown"
-                                        data-dropdown="#dropdown-people">People</a>
-                                </li>
-<!--                                <li>-->
-<!--                                    <a href="/news-insights-analysis/" class="dropdown"-->
-<!--                                        data-dropdown="#dropdown-news-insights">News &amp; insights</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="/shareholders-and-debtholders/" class="dropdown"-->
-<!--                                        data-dropdown="#dropdown-shareholders-debtholders">Shareholders &amp;-->
-<!--                                        Debtholders</a>-->
-<!--                                </li>-->
+                            <ul id="header-menu" class="menu header-menu d-none d-lg-flex">
+                                <!--       script动态注入       -->
                             </ul>
-
 
                             <div class="mobile-triggers d-block d-lg-none">
                                 <div class="menu-icon menu-trigger">
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#mobilemenuModal">Menu</a>
+                                    <a
+                                            href="#"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#mobilemenuModal"
+                                    >Menu</a
+                                    >
                                 </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-<!--                    <div id="utility-menu__wrapper" class="g-flex d-none d-lg-flex">-->
-<!--                        <div class="menu-utility-menu-container">-->
-<!--                            <ul id="menu-utility-menu" class="menu">-->
-<!--                                <li class="menu-item menu-item-type-custom menu-item-object-custom">-->
-<!--                                    <a href="/sustainability/portugal">Portugal</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-                </div>
-            </div>
-        </div>
-
-        <div class="icg-dropdown-menu" id="dropdown-clients">
-            <div class="icg-dropdown-menu__content">
-                <div class="container-fluid">
-                    <div class="icg-wrapper">
-                        <div class="icg-dropdown-menu__wrapper g-flex">
-                            <div class="intro">
-                                <h3>We invest globally.<br>
-                                    We grow businesses sustainably.<br>
-                                    We value partnerships.</h3>
-
-                                <a class="arrow-link no-underline cta">Who we are</a>
-                            </div>
-                            <div class="links">
-                                <div class="menu-who-we-are-menu-container">
-                                    <ul id="menu-who-we-are-menu" class="menu" style="height: 280px;">
-                                        <li id="menu-item-2782"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2782">
-                                            <a>Overview</a></li>
-                                        <li id="menu-item-1581"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1581">
-                                            <a>Our
-                                                purpose &amp; business</a></li>
-                                        <li id="menu-item-1175"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1175">
-                                            <a>Our culture &amp;
-                                                values</a></li>
-                                        <li id="menu-item-622"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-622">
-                                            <a>Leadership
-                                                &amp; governance</a>
-                                            <ul class="sub-menu" style="height: 320px;">
-                                                <li id="menu-item-2293"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2293">
-                                                    <a>Annual
-                                                        reports</a></li>
-                                                <li id="menu-item-2488"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2488">
-                                                    <a>Board
-                                                        &amp; committees</a></li>
-                                                <li id="menu-item-2489"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2489">
-                                                    <a>Executive
-                                                        directors</a></li>
-                                                <li id="menu-item-2295"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2295">
-                                                    <a>Policies
-                                                        &amp; disclosures</a></li>
-                                                <li id="menu-item-2294"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2294">
-                                                    <a>Sustainability
-                                                        and people reports</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-2611"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2611">
-                                            <a>Corporate
-                                                social responsibility</a></li>
-                                        <li id="menu-item-1176"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1176">
-                                            <a>Our history</a></li>
-                                        <li id="menu-item-671"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-671">
-                                            <a>Our offices</a>
-                                            <ul class="sub-menu" style="height: 320px;">
-                                                <li id="menu-item-2192"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2192">
-                                                    <a>Asia Pacific</a>
-                                                </li>
-                                                <li id="menu-item-2189"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2189">
-                                                    <a>Europe</a></li>
-                                                <li id="menu-item-2191"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2191">
-                                                    <a>Middle East</a></li>
-                                                <li id="menu-item-2190"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2190">
-                                                    <a>North America</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="featured">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="icg-dropdown-menu" id="dropdown-who-we-are">
-            <div class="icg-dropdown-menu__content">
-                <div class="container-fluid">
-                    <div class="icg-wrapper">
-                        <div class="icg-dropdown-menu__wrapper g-flex">
-                            <div class="intro">
-                                <h3>We invest globally.<br>
-                                    We grow businesses sustainably.<br>
-                                    We value partnerships.</h3>
-
-                                <a class="arrow-link no-underline cta">Who we are</a>
-                            </div>
-                            <div class="links">
-                                <div class="menu-who-we-are-menu-container">
-                                    <ul id="menu-who-we-are-menu-1" class="menu" style="height: 280px;">
-                                        <li
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2782">
-                                            <a>Overview</a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1581">
-                                            <a>Our
-                                                purpose &amp; business</a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1175">
-                                            <a>Our culture &amp;
-                                                values</a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-622">
-                                            <a>Leadership
-                                                &amp; governance</a>
-                                            <ul class="sub-menu" style="height: 320px;">
-                                                <li
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2293">
-                                                    <a>Annual
-                                                        reports</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2488">
-                                                    <a>Board
-                                                        &amp; committees</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2489">
-                                                    <a>Executive
-                                                        directors</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2295">
-                                                    <a>Policies
-                                                        &amp; disclosures</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2294">
-                                                    <a>Sustainability
-                                                        and people reports</a></li>
-                                            </ul>
-                                        </li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2611">
-                                            <a>Corporate
-                                                social responsibility</a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1176">
-                                            <a>Our history</a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-671">
-                                            <a>Our offices</a>
-                                            <ul class="sub-menu" style="height: 320px;">
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2192">
-                                                    <a>Asia Pacific</a>
-                                                </li>
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2189">
-                                                    <a>Europe</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2191">
-                                                    <a>Middle East</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2190">
-                                                    <a>North America</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="featured">
-
-                                <article id="post-6525"
-                                         class="post-box  post-6525 post type-post status-publish format-standard has-post-thumbnail hentry category-alternative-credit category-european-corporate category-european-infrastructure category-european-mid-market category-life-sciences category-liquid-loans category-lp-secondaries category-metropolitan category-multi-asset-credit category-north-american-private-debt category-real-estate-debt category-real-estate-senior-debt category-research-market-analysis category-senior-debt-partners category-special-opportunities category-strategic-equity category-strategic-real-estate-sre geography-dk geography-fr geography-de geography-it geography-lu geography-nl geography-pl geography-es geography-se geography-uk geography-us">
-
-
-                                    <div class="image-container">
-
-                                        <div class="image-wrapper">
-                                            <a
-                                                class="post-link objfit">
-
-                                                <video
-                                                    src="../public/changli/newImages/home_video.mp4"
-                                                    class="objfit" autoplay="" muted="" loop="" preload="auto"
-                                                    playsinline=""></video>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="text-container">
-
-                                        <h2 class="post-title"><a
-                                            class="no-underline ">Europe and UK at an Inflection Point</a></h2>
-
-
-
-
-
-
-                                    </div>
-
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="icg-dropdown-menu" id="dropdown-what-we-do">
-            <div class="icg-dropdown-menu__content">
-                <div class="container-fluid">
-                    <div class="icg-wrapper">
-                        <div class="icg-dropdown-menu__wrapper g-flex">
-                            <div class="intro">
-                                <h3>We provide flexible, sustainable solutions.<br>
-                                    We drive outstanding performance.<br>
-                                    We operate with purpose.</h3>
-
-                                <a class="arrow-link no-underline cta">What we do</a>
-                            </div>
-                            <div class="links">
-                                <div class="menu-what-we-do-container">
-                                    <ul id="menu-what-we-do" class="menu" style="height: 160px;">
-                                        <li id="menu-item-2783"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2783">
-                                            <a>Overview</a></li>
-                                        <li id="menu-item-2841"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2841">
-                                            <a>Corporate
-                                                strategies</a>
-                                            <ul class="sub-menu" style="height: 200px;">
-                                                <li id="menu-item-2843"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2843">
-                                                    <a>European
-                                                        strategies</a></li>
-                                                <li id="menu-item-2845"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2845">
-                                                    <a>North
-                                                        American strategies</a></li>
-                                                <li id="menu-item-2844"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2844">
-                                                    <a>Asia
-                                                        Pacific strategies</a></li>
-                                                <li id="menu-item-2842"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2842">
-                                                    <a>Global
-                                                        strategies</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-1184"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1184">
-                                            <a>Credit strategies</a>
-                                            <ul class="sub-menu" style="height: 200px;">
-                                                <li id="menu-item-1688"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1688">
-                                                    <a>Alternative
-                                                        Credit</a></li>
-                                                <li id="menu-item-1687"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1687">
-                                                    <a>Liquid
-                                                        Loans</a></li>
-                                                <li id="menu-item-1686"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1686">
-                                                    <a>Multi-Asset
-                                                        Credit</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-1182"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1182">
-                                            <a>Real Assets
-                                                strategies</a>
-                                            <ul class="sub-menu" style="height: 200px;">
-                                                <li id="menu-item-4814"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4814">
-                                                    <a>Infrastructure</a>
-                                                </li>
-                                                <li id="menu-item-2884"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2884">
-                                                    <a>Real
-                                                        Estate</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="featured">
-
-                                <article id="post-6926"
-                                         class="post-box  post-6926 post type-post status-publish format-standard has-post-thumbnail hentry category-alternative-credit category-european-corporate category-european-infrastructure category-european-mid-market category-life-sciences category-liquid-loans category-lp-secondaries category-metropolitan category-multi-asset-credit category-north-american-private-debt category-real-estate-debt category-real-estate-senior-debt category-research-market-analysis category-senior-debt-partners category-special-opportunities category-strategic-equity category-strategic-real-estate-sre geography-canada geography-dk geography-fr geography-de geography-it geography-lu geography-nl geography-pl geography-es geography-se geography-uk geography-us">
-
-
-                                    <div class="image-container">
-
-                                        <div class="image-wrapper">
-                                            <div
-                                                class="post-link objfit">
-
-                                                <img width="500" height="275"
-                                                     src="../public/changli/newImages/nav/nav_image_1.jpg"
-                                                     class="objfit wp-post-image lazyloaded"
-                                                     decoding="async"/>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="text-container">
-
-                                        <h2 class="post-title"><a
-                                            class="no-underline ">US and Europe Private Company
-                                            Trends:&nbsp;Resilience Sustained</a></h2>
-
-
-
-
-
-
-                                    </div>
-
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="icg-dropdown-menu" id="dropdown-sustainability">
-            <div class="icg-dropdown-menu__content">
-                <div class="container-fluid">
-                    <div class="icg-wrapper">
-                        <div class="icg-dropdown-menu__wrapper g-flex">
-                            <div class="intro">
-                                <h3>We invest responsibly.<br>
-                                    We operate with purpose.<br>
-                                    We are committed to decarbonisation.</h3>
-
-                                <a class="arrow-link no-underline cta">Sustainability</a>
-                            </div>
-                            <div class="links">
-                                <div class="menu-sustainability-esg-menu-container">
-                                    <ul id="menu-sustainability-esg-menu" class="menu" style="height: 160px;">
-                                        <li id="menu-item-2285"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2285">
-                                            <a>Overview</a>
-                                            <ul class="sub-menu" style="height: 200px;">
-                                                <li id="menu-item-4827"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4827">
-                                                    <a>Benchmarks
-                                                        and ratings</a></li>
-                                                <li id="menu-item-2289"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2289">
-                                                    <a>ESG
-                                                        governance</a></li>
-                                                <li id="menu-item-2286"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2286">
-                                                    <a>Our
-                                                        ESG priorities</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-1449"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1449">
-                                            <a>Investing
-                                                responsibly</a>
-                                            <ul class="sub-menu" style="height: 200px;">
-                                                <li id="menu-item-2287"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2287">
-                                                    <a>Responsible
-                                                        Investing Policy</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-1444"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1444">
-                                            <a>Towards net
-                                                zero</a>
-                                            <ul class="sub-menu" style="height: 200px;">
-                                                <li id="menu-item-4099"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4099">
-                                                    <a>Climate
-                                                        Change Policy</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-1443"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1443">
-                                            <a>Sustainability
-                                                and people reports</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="featured">
-
-                                <article id="post-4886"
-                                         class="post-box  post-4886 post type-post status-publish format-standard has-post-thumbnail hentry category-european-corporate category-insights category-investing-sustainably category-towards-net-zero geography-fr geography-es geography-uk resource-video">
-
-
-                                    <div class="image-container">
-
-                                        <div class="image-wrapper">
-                                            <a
-                                                class="post-link objfit">
-
-                                                <video
-                                                    src="../public/changli/newImages/nav/nav_video_1.mp4"
-                                                    class="objfit" autoplay="" muted="" loop="" preload="auto"
-                                                    playsinline=""></video>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="text-container">
-
-                                        <h2 class="post-title"><a
-                                            class="no-underline ">Climate leadership within our portfolio</a></h2>
-
-
-
-
-
-
-                                    </div>
-
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="icg-dropdown-menu" id="dropdown-people">
-            <div class="icg-dropdown-menu__content">
-                <div class="container-fluid">
-                    <div class="icg-wrapper">
-                        <div class="icg-dropdown-menu__wrapper g-flex">
-                            <div class="intro">
-                                <h3>We are a global business of local people.<br>
-                                    Attracting and developing the best talent.<br>
-                                    Living an inclusive environment.</h3>
-
-                                <a class="arrow-link no-underline cta">People</a>
-                            </div>
-                            <div class="links">
-                                <div class="menu-people-careers-menu-container">
-                                    <ul id="menu-people-careers-menu" class="menu" style="height: 200px;">
-                                        <li id="menu-item-3902"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-523 current_page_item menu-item-3902">
-                                            <a
-                                                aria-current="page">Overview</a></li>
-                                        <li id="menu-item-2341"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2341">
-                                            <a>People
-                                                strategy</a></li>
-                                        <li id="menu-item-2194"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2194">
-                                            <a>Development
-                                                and engagement</a></li>
-                                        <li id="menu-item-2197"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2197">
-                                            <a>Diversity,
-                                                Equity and Inclusion</a>
-                                            <ul class="sub-menu" style="height: 240px;">
-                                                <li id="menu-item-6099"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6099">
-                                                    <a>Employee
-                                                        initiatives</a></li>
-                                                <li id="menu-item-6098"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6098">
-                                                    <a>Family
-                                                        and family building</a></li>
-                                                <li id="menu-item-6100"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6100">
-                                                    <a>Partnerships
-                                                        and philanthropy</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-2902"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2902">
-                                            <a>Careers</a>
-                                            <ul class="sub-menu" style="height: 240px;">
-                                                <li id="menu-item-2196"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2196">
-                                                    <a
-                                                        target="_blank" class="external-link">Current vacancies</a></li>
-                                                <li id="menu-item-2193"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2193">
-                                                    <a>Early
-                                                        careers</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="featured">
-
-                                <article id="post-5645"
-                                         class="post-box  post-5645 post type-post status-publish format-standard has-post-thumbnail hentry category-early-careers category-insights geography-london resource-image resource-video">
-
-
-                                    <div class="image-container">
-
-                                        <div class="image-wrapper">
-                                            <div
-                                                class="post-link objfit">
-
-                                                <img width="500" height="275"
-                                                     src="../public/changli/newImages/nav/nav_image_2.jpg"
-                                                     class="objfit wp-post-image lazyloaded"
-                                                     decoding="async"/>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="text-container">
-
-                                        <h2 class="post-title"><a
-                                            class="no-underline ">How to start your career in alternative asset
-                                            management – ICG’s graduate programme</a></h2>
-
-
-
-
-
-
-                                    </div>
-
-                                </article>
                             </div>
                         </div>
                     </div>
@@ -1058,8 +492,315 @@
             </div>
         </div>
 
-
+        <div id="dropdowns-container">
+            <!--     script动态注入       -->
+        </div>
     </header>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'en';
+        // 配置项
+        const menuConfig = [
+            {
+                title: translations[lang].clients.title,
+                link: "/",
+                className: "dropdown",
+                dropdown: false,
+            },
+            {
+                title: translations[lang].whoWeAre.title,
+                link: "/who-we-are/",
+                className: "dropdown",
+                dropdownId: "#dropdown-who-we-are",
+            },
+            {
+                title: translations[lang].whatWeDo.title,
+                link: "/what-we-do/",
+                className: "dropdown",
+                dropdownId: "#dropdown-what-we-do",
+            },
+            {
+                title: translations[lang].sustainability.title,
+                link: "/sustainability/",
+                className: "current-menu-item",
+                dropdownId: "#dropdown-sustainability",
+            },
+            {
+                title: translations[lang].people.title,
+                link: "/people-and-careers/",
+                className: "dropdown",
+                dropdownId: "#dropdown-people",
+            },
+            {
+                title: translations[lang].language.title,
+                link: "#",
+                className: "dropdown",
+                dropdownId: "#dropdown-language",
+            }
+        ];
+
+        // 动态生成菜单项
+        function generateMenu() {
+            const menuContainer = document.getElementById('header-menu');
+
+            menuConfig.forEach(item => {
+                const li = document.createElement('li');
+
+                const a = document.createElement('a');
+                a.href = item.link;
+                a.textContent = item.title;
+                if (item.className) a.classList.add(item.className);
+                if (item.dropdownId) a.setAttribute('data-dropdown', item.dropdownId);
+
+                li.appendChild(a);
+                menuContainer.appendChild(li);
+            });
+        }
+
+        // 调用函数生成菜单
+        generateMenu();
+
+        // 菜单配置项
+        const menus = [
+            {
+                id: 'dropdown-what-we-do',
+                title: translations[lang].whatWeDo.title,  // 从 translations 中获取标题
+                intro: translations[lang].whatWeDo.intro,  // 从 translations 中获取简介
+                links: [
+                    { label: translations[lang].whatWeDo.links.overview, url: '#' },
+                    {
+                        label: translations[lang].whatWeDo.links.corporateStrategies.title,
+                        subLinks: [
+                            { label: translations[lang].whatWeDo.links.corporateStrategies.european, url: '#' },
+                            { label: translations[lang].whatWeDo.links.corporateStrategies.northAmerica, url: '#' },
+                            { label: translations[lang].whatWeDo.links.corporateStrategies.asiaPacific, url: '#' },
+                            { label: translations[lang].whatWeDo.links.corporateStrategies.global, url: '#' }
+                        ]
+                    },
+                    {
+                        label: translations[lang].whatWeDo.links.creditStrategies.title,
+                        subLinks: [
+                            { label: translations[lang].whatWeDo.links.creditStrategies.alternative, url: '#' },
+                            { label: translations[lang].whatWeDo.links.creditStrategies.liquidLoans, url: '#' },
+                            { label: translations[lang].whatWeDo.links.creditStrategies.multiAsset, url: '#' }
+                        ]
+                    },
+                    {
+                        label: translations[lang].whatWeDo.links.realAssets.title,
+                        subLinks: [
+                            { label: translations[lang].whatWeDo.links.realAssets.infrastructure, url: '#' },
+                            { label: translations[lang].whatWeDo.links.realAssets.realEstate, url: '#' }
+                        ]
+                    }
+                ],
+                featured: {
+                    imageSrc: '/public/changli/newImages/nav/nav_image_1.jpg',
+                    title: translations[lang].whatWeDo.featuredTitle,  // 使用翻译中的 featured 文本
+                }
+            },
+            {
+                id: 'dropdown-who-we-are',
+                title: translations[lang].whoWeAre.title,  // 替换 Who we are 的标题
+                intro: translations[lang].whoWeAre.intro,  // 替换 Who we are 的简介
+                links: [
+                    { label: translations[lang].whoWeAre.links.overview, url: '#' },
+                    { label: translations[lang].whoWeAre.links.ourPurpose, url: '#' },
+                    { label: translations[lang].whoWeAre.links.ourCulture, url: '#' },
+                    {
+                        label: translations[lang].whoWeAre.links.leadership.title,
+                        subLinks: [
+                            { label: translations[lang].whoWeAre.links.leadership.annualReports, url: '#' },
+                            { label: translations[lang].whoWeAre.links.leadership.board, url: '#' },
+                            { label: translations[lang].whoWeAre.links.leadership.executiveDirectors, url: '#' },
+                            { label: translations[lang].whoWeAre.links.leadership.policies, url: '#' },
+                            { label: translations[lang].whoWeAre.links.leadership.sustainabilityReports, url: '#' }
+                        ]
+                    },
+                    { label: translations[lang].whoWeAre.links.csr, url: '#' },
+                    { label: translations[lang].whoWeAre.links.history, url: '#' },
+                    {
+                        label: translations[lang].whoWeAre.links.offices.title,
+                        subLinks: [
+                            { label: translations[lang].whoWeAre.links.offices.asiaPacific, url: '#' },
+                            { label: translations[lang].whoWeAre.links.offices.europe, url: '#' },
+                            { label: translations[lang].whoWeAre.links.offices.middleEast, url: '#' },
+                            { label: translations[lang].whoWeAre.links.offices.northAmerica, url: '#' }
+                        ]
+                    }
+                ],
+                featured: {
+                    videoSrc: '/public/changli/newImages/home_video.mp4',
+                    title: translations[lang].whoWeAre.featuredTitle,
+                }
+            },
+            {
+                id: 'dropdown-sustainability',
+                title: translations[lang].sustainability.title,
+                intro: translations[lang].sustainability.intro,
+                links: [
+                    {
+                        label: translations[lang].sustainability.links.overview.title,
+                        subLinks: [
+                            { label: translations[lang].sustainability.links.overview.benchmarks, url: '#' },
+                            { label: translations[lang].sustainability.links.overview.esg, url: '#' },
+                            { label: translations[lang].sustainability.links.overview.priorities, url: '#' }
+                        ]
+                    },
+                    {
+                        label: translations[lang].sustainability.links.responsibleInvesting.title,
+                        subLinks: [
+                            { label: translations[lang].sustainability.links.responsibleInvesting.policy, url: '#' }
+                        ]
+                    },
+                    {
+                        label: translations[lang].sustainability.links.towardsNetZero.title,
+                        subLinks: [
+                            { label: translations[lang].sustainability.links.towardsNetZero.climatePolicy, url: '#' }
+                        ]
+                    },
+                    {
+                        label: translations[lang].sustainability.links.reports,
+                        url: '#'
+                    }
+                ],
+                featured: {
+                    videoSrc: '/public/changli/newImages/nav/nav_video_1.mp4',
+                    title: translations[lang].sustainability.featuredTitle,
+                }
+            },
+            {
+                id: 'dropdown-people',
+                title: translations[lang].people.title,
+                intro: translations[lang].people.intro,
+                links: [
+                    { label: translations[lang].people.links.overview, url: '#', current: true },
+                    { label: translations[lang].people.links.strategy, url: '#' },
+                    { label: translations[lang].people.links.development, url: '#' },
+                    {
+                        label: translations[lang].people.links.diversity.title,
+                        subLinks: [
+                            { label: translations[lang].people.links.diversity.employee, url: '#' },
+                            { label: translations[lang].people.links.diversity.family, url: '#' },
+                            { label: translations[lang].people.links.diversity.partnerships, url: '#' }
+                        ]
+                    },
+                    {
+                        label: translations[lang].people.links.careers.title,
+                        subLinks: [
+                            { label: translations[lang].people.links.careers.vacancies, url: '#', target: '_blank', external: true },
+                            { label: translations[lang].people.links.careers.earlyCareers, url: '#' }
+                        ]
+                    }
+                ],
+                featured: {
+                    imageSrc: '/public/changli/newImages/nav/nav_image_2.jpg',
+                    title: translations[lang].people.featuredTitle,
+                }
+            },
+            {
+                id: 'dropdown-language',
+                title: translations[lang].language.title,
+                intro: '',
+                links: [
+                    { label: translations[lang].language.link[0].title, url: '/?lang=en' },
+                    { label: translations[lang].language.link[1].title, url: '/?lang=pt' },
+                    { label: translations[lang].language.link[2].title, url: '/?lang=id' }
+                ],
+                featured: {
+                    imageSrc: '/public/changli/newImages/nav/nav_image_2.jpg',
+                    title: translations[lang].language.featuredTitle,
+                }
+            }
+        ];
+
+        // 生成下拉菜单的函数
+        function createDropdownMenu(menu) {
+            if (menu.id === 'dropdown-language') {
+                // 特殊处理语言菜单的显示界面
+                return `
+        <div class="icg-dropdown-menu" id="${menu.id}">
+            <div class="icg-dropdown-menu__content">
+                <div class="container-fluid">
+                    <div class="icg-wrapper">
+                        <div class="icg-dropdown-menu__wrapper g-flex justify-end">
+                            <div class="language-options">
+                                <ul class="language-menu">
+                                    ${menu.links.map(link => `
+                                        <li class="language-item">
+                                            <a href="${link.url}">${link.label}</a>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+            } else {
+                // 默认处理其他菜单项
+                return `
+        <div class="icg-dropdown-menu" id="${menu.id}">
+            <div class="icg-dropdown-menu__content">
+                <div class="container-fluid">
+                    <div class="icg-wrapper">
+                        <div class="icg-dropdown-menu__wrapper g-flex">
+                            <div class="intro">
+                                <h3>${menu.intro}</h3>
+                                <a class="arrow-link no-underline cta">${menu.title}</a>
+                            </div>
+                            <div class="links">
+                                <div class="menu-container">
+                                    <ul class="menu">
+                                        ${menu.links.map(link => `
+                                            <li class="menu-item">
+                                                <a href="${link.url}">${link.label}</a>
+                                                ${link.subLinks ? `
+                                                    <ul class="sub-menu">
+                                                        ${link.subLinks.map(subLink => `
+                                                            <li class="menu-item">
+                                                                <a href="${subLink.url}">${subLink.label}</a>
+                                                            </li>
+                                                        `).join('')}
+                                                    </ul>
+                                                ` : ''}
+                                            </li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="featured">
+                                <article class="post-box">
+                                    <div class="image-container">
+                                        <div class="image-wrapper">
+                                            <a class="post-link objfit">
+                                                <video src="${menu.featured.videoSrc}" autoplay muted loop preload="auto" playsinline></video>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="text-container">
+                                        <h2 class="post-title">
+                                            <a class="no-underline">${menu.featured.title}</a>
+                                        </h2>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+            }
+        }
+
+        // 动态注入所有菜单
+        const dropdownsContainer = document.getElementById("dropdowns-container");
+        menus.forEach(menu => {
+            dropdownsContainer.innerHTML += createDropdownMenu(menu);
+        });
+    </script>
     <div id="body-overlay" class=""></div>
 
     <div id="icg-search">

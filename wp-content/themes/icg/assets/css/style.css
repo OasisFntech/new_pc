@@ -3,10 +3,14 @@
 Site Name: ICG
 Stylesheet: Main Stylesheet
 ******************************************************************/
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+.language-options {
+  margin-left: auto;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -15317,7 +15321,7 @@ blockquote.quote-with-author-module .author-info__right cite b {
     grid-template-columns: calc((100% - 50px) / 2) 50px calc(((100% - 50px) / 2 - 50px) / 2) 50px calc(((100% - 50px) / 2 - 50px) / 2);
     /* grid-template-columns: 2fr 50px 1fr 50px 1fr; */
     grid-template-rows: 1fr 65px 1fr;
-    /* 
+    /*
     Can't use because they aren't supported on IE11
     grid-column-gap: 50px;
     grid-row-gap: 65px; */

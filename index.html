@@ -440,6 +440,18 @@
       type="text/javascript"
       src="./wp-content/themes/icg/assets/js/vendor-libs/frame-manager.js"
     ></script>
+      <script
+        src="./translation.js"
+        type="text/javascript"
+      >
+
+      </script>
+      <script
+              src="./common.js"
+              type="text/javascript"
+      >
+
+      </script>
   </head>
 
   <body
@@ -499,40 +511,42 @@
     </header>
 
     <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'en';
         // 配置项
         const menuConfig = [
             {
-                title: "Clients",
+                title: translations[lang].clients.title,
                 link: "/",
                 className: "current-menu-item",
                 dropdown: false,
             },
             {
-                title: "Who we are",
-                link: "/pc/who-we-are/",
+                title: translations[lang].whoWeAre.title,
+                link: "/who-we-are/",
                 className: "dropdown",
                 dropdownId: "#dropdown-who-we-are",
             },
             {
-                title: "What we do",
-                link: "/pc/what-we-do/",
+                title: translations[lang].whatWeDo.title,
+                link: "/what-we-do/",
                 className: "dropdown",
                 dropdownId: "#dropdown-what-we-do",
             },
             {
-                title: "Sustainability",
-                link: "/pc/sustainability/",
+                title: translations[lang].sustainability.title,
+                link: "/sustainability/",
                 className: "dropdown",
                 dropdownId: "#dropdown-sustainability",
             },
             {
-                title: "People",
-                link: "/pc/people-and-careers/",
+                title: translations[lang].people.title,
+                link: "/people-and-careers/",
                 className: "dropdown",
                 dropdownId: "#dropdown-people",
             },
             {
-                title: "Language",
+                title: translations[lang].language.title,
                 link: "#",
                 className: "dropdown",
                 dropdownId: "#dropdown-language",
@@ -564,152 +578,151 @@
         const menus = [
             {
                 id: 'dropdown-what-we-do',
-                title: 'What we do',
-                intro: 'We provide flexible, sustainable solutions.<br>We drive outstanding performance.<br>We operate with purpose.',
+                title: translations[lang].whatWeDo.title,  // 从 translations 中获取标题
+                intro: translations[lang].whatWeDo.intro,  // 从 translations 中获取简介
                 links: [
-                    { label: 'Overview', url: '#' },
+                    { label: translations[lang].whatWeDo.links.overview, url: '#' },
                     {
-                        label: 'Corporate strategies',
+                        label: translations[lang].whatWeDo.links.corporateStrategies.title,
                         subLinks: [
-                            { label: 'European strategies', url: '#' },
-                            { label: 'North American strategies', url: '#' },
-                            { label: 'Asia Pacific strategies', url: '#' },
-                            { label: 'Global strategies', url: '#' }
+                            { label: translations[lang].whatWeDo.links.corporateStrategies.european, url: '#' },
+                            { label: translations[lang].whatWeDo.links.corporateStrategies.northAmerica, url: '#' },
+                            { label: translations[lang].whatWeDo.links.corporateStrategies.asiaPacific, url: '#' },
+                            { label: translations[lang].whatWeDo.links.corporateStrategies.global, url: '#' }
                         ]
                     },
                     {
-                        label: 'Credit strategies',
+                        label: translations[lang].whatWeDo.links.creditStrategies.title,
                         subLinks: [
-                            { label: 'Alternative Credit', url: '#' },
-                            { label: 'Liquid Loans', url: '#' },
-                            { label: 'Multi-Asset Credit', url: '#' }
+                            { label: translations[lang].whatWeDo.links.creditStrategies.alternative, url: '#' },
+                            { label: translations[lang].whatWeDo.links.creditStrategies.liquidLoans, url: '#' },
+                            { label: translations[lang].whatWeDo.links.creditStrategies.multiAsset, url: '#' }
                         ]
                     },
                     {
-                        label: 'Real Assets strategies',
+                        label: translations[lang].whatWeDo.links.realAssets.title,
                         subLinks: [
-                            { label: 'Infrastructure', url: '#' },
-                            { label: 'Real Estate', url: '#' }
+                            { label: translations[lang].whatWeDo.links.realAssets.infrastructure, url: '#' },
+                            { label: translations[lang].whatWeDo.links.realAssets.realEstate, url: '#' }
                         ]
                     }
                 ],
                 featured: {
                     imageSrc: '/public/changli/newImages/nav/nav_image_1.jpg',
-                    title: 'US and Europe Private Company Trends: Resilience Sustained',
+                    title: translations[lang].whatWeDo.featuredTitle,  // 使用翻译中的 featured 文本
                 }
             },
             {
                 id: 'dropdown-who-we-are',
-                title: 'Who we are',
-                intro: 'We invest globally.<br>We grow businesses sustainably.<br>We value partnerships.',
+                title: translations[lang].whoWeAre.title,  // 替换 Who we are 的标题
+                intro: translations[lang].whoWeAre.intro,  // 替换 Who we are 的简介
                 links: [
-                    { label: 'Overview', url: '#' },
-                    { label: 'Our purpose & business', url: '#' },
-                    { label: 'Our culture & values', url: '#' },
+                    { label: translations[lang].whoWeAre.links.overview, url: '#' },
+                    { label: translations[lang].whoWeAre.links.ourPurpose, url: '#' },
+                    { label: translations[lang].whoWeAre.links.ourCulture, url: '#' },
                     {
-                        label: 'Leadership & governance',
+                        label: translations[lang].whoWeAre.links.leadership.title,
                         subLinks: [
-                            { label: 'Annual reports', url: '#' },
-                            { label: 'Board & committees', url: '#' },
-                            { label: 'Executive directors', url: '#' },
-                            { label: 'Policies & disclosures', url: '#' },
-                            { label: 'Sustainability and people reports', url: '#' }
+                            { label: translations[lang].whoWeAre.links.leadership.annualReports, url: '#' },
+                            { label: translations[lang].whoWeAre.links.leadership.board, url: '#' },
+                            { label: translations[lang].whoWeAre.links.leadership.executiveDirectors, url: '#' },
+                            { label: translations[lang].whoWeAre.links.leadership.policies, url: '#' },
+                            { label: translations[lang].whoWeAre.links.leadership.sustainabilityReports, url: '#' }
                         ]
                     },
-                    { label: 'Corporate social responsibility', url: '#' },
-                    { label: 'Our history', url: '#' },
+                    { label: translations[lang].whoWeAre.links.csr, url: '#' },
+                    { label: translations[lang].whoWeAre.links.history, url: '#' },
                     {
-                        label: 'Our offices',
+                        label: translations[lang].whoWeAre.links.offices.title,
                         subLinks: [
-                            { label: 'Asia Pacific', url: '#' },
-                            { label: 'Europe', url: '#' },
-                            { label: 'Middle East', url: '#' },
-                            { label: 'North America', url: '#' }
+                            { label: translations[lang].whoWeAre.links.offices.asiaPacific, url: '#' },
+                            { label: translations[lang].whoWeAre.links.offices.europe, url: '#' },
+                            { label: translations[lang].whoWeAre.links.offices.middleEast, url: '#' },
+                            { label: translations[lang].whoWeAre.links.offices.northAmerica, url: '#' }
                         ]
                     }
                 ],
                 featured: {
                     videoSrc: '/public/changli/newImages/home_video.mp4',
-                    title: 'Europe and UK at an Inflection Point',
+                    title: translations[lang].whoWeAre.featuredTitle,
                 }
             },
             {
                 id: 'dropdown-sustainability',
-                title: 'Sustainability',
-                intro: 'We invest responsibly.<br>We operate with purpose.<br>We are committed to decarbonisation.',
+                title: translations[lang].sustainability.title,
+                intro: translations[lang].sustainability.intro,
                 links: [
                     {
-                        label: 'Overview',
+                        label: translations[lang].sustainability.links.overview.title,
                         subLinks: [
-                            { label: 'Benchmarks and ratings', url: '#' },
-                            { label: 'ESG governance', url: '#' },
-                            { label: 'Our ESG priorities', url: '#' }
+                            { label: translations[lang].sustainability.links.overview.benchmarks, url: '#' },
+                            { label: translations[lang].sustainability.links.overview.esg, url: '#' },
+                            { label: translations[lang].sustainability.links.overview.priorities, url: '#' }
                         ]
                     },
                     {
-                        label: 'Investing responsibly',
+                        label: translations[lang].sustainability.links.responsibleInvesting.title,
                         subLinks: [
-                            { label: 'Responsible Investing Policy', url: '#' }
+                            { label: translations[lang].sustainability.links.responsibleInvesting.policy, url: '#' }
                         ]
                     },
                     {
-                        label: 'Towards net zero',
+                        label: translations[lang].sustainability.links.towardsNetZero.title,
                         subLinks: [
-                            { label: 'Climate Change Policy', url: '#' }
+                            { label: translations[lang].sustainability.links.towardsNetZero.climatePolicy, url: '#' }
                         ]
                     },
                     {
-                        label: 'Sustainability and people reports',
+                        label: translations[lang].sustainability.links.reports,
                         url: '#'
                     }
                 ],
                 featured: {
                     videoSrc: '/public/changli/newImages/nav/nav_video_1.mp4',
-                    title: 'Climate leadership within our portfolio',
+                    title: translations[lang].sustainability.featuredTitle,
                 }
             },
             {
                 id: 'dropdown-people',
-                title: 'People',
-                intro: 'We are a global business of local people.<br>Attracting and developing the best talent.<br>Living an inclusive environment.',
+                title: translations[lang].people.title,
+                intro: translations[lang].people.intro,
                 links: [
-                    { label: 'Overview', url: '#', current: true },
-                    { label: 'People strategy', url: '#' },
-                    { label: 'Development and engagement', url: '#' },
+                    { label: translations[lang].people.links.overview, url: '#', current: true },
+                    { label: translations[lang].people.links.strategy, url: '#' },
+                    { label: translations[lang].people.links.development, url: '#' },
                     {
-                        label: 'Diversity, Equity and Inclusion',
+                        label: translations[lang].people.links.diversity.title,
                         subLinks: [
-                            { label: 'Employee initiatives', url: '#' },
-                            { label: 'Family and family building', url: '#' },
-                            { label: 'Partnerships and philanthropy', url: '#' }
+                            { label: translations[lang].people.links.diversity.employee, url: '#' },
+                            { label: translations[lang].people.links.diversity.family, url: '#' },
+                            { label: translations[lang].people.links.diversity.partnerships, url: '#' }
                         ]
                     },
                     {
-                        label: 'Careers',
+                        label: translations[lang].people.links.careers.title,
                         subLinks: [
-                            { label: 'Current vacancies', url: '#', target: '_blank', external: true },
-                            { label: 'Early careers', url: '#' }
+                            { label: translations[lang].people.links.careers.vacancies, url: '#', target: '_blank', external: true },
+                            { label: translations[lang].people.links.careers.earlyCareers, url: '#' }
                         ]
                     }
                 ],
                 featured: {
                     imageSrc: '/public/changli/newImages/nav/nav_image_2.jpg',
-                    title: 'How to start your career in alternative asset management – ICG’s graduate programme',
+                    title: translations[lang].people.featuredTitle,
                 }
-            }
-            ,
+            },
             {
                 id: 'dropdown-language',
-                title: 'Language',
+                title: translations[lang].language.title,
                 intro: '',
                 links: [
-                    { title: "English", link: "/?lang=en" },
-                    { title: "Português", link: "/?lang=pt" },
-                    { title: "Bahasa Indonesia", link: "/?lang=id" }
+                    { label: translations[lang].language.link[0].title, url: '/?lang=en' },
+                    { label: translations[lang].language.link[1].title, url: '/?lang=pt' },
+                    { label: translations[lang].language.link[2].title, url: '/?lang=id' }
                 ],
                 featured: {
                     imageSrc: '/public/changli/newImages/nav/nav_image_2.jpg',
-                    title: 'How to start your career in alternative asset management – ICG’s graduate programme',
+                    title: translations[lang].language.featuredTitle,
                 }
             }
         ];
@@ -728,7 +741,7 @@
                                 <ul class="language-menu">
                                     ${menu.links.map(link => `
                                         <li class="language-item">
-                                            <a href="${link.link}">${link.title}</a>
+                                            <a href="${link.url}">${link.label}</a>
                                         </li>
                                     `).join('')}
                                 </ul>
@@ -851,21 +864,21 @@
 
         </div>
           <script>
-              // 动态内容
               const dynamicContent = {
-                  title: "Significant and resilient value creation for our clients"
+                  title: commonTranslation[lang].dynamicTitle
               };
 
               // 注入配置到页面中
-              document.getElementById('dynamic-title').textContent = dynamicContent.title; // 设置动态标题
+              console.log(dynamicContent.title)
+              document.getElementById('dynamic-title').textContent = dynamicContent.title;
+
               // 动态配置项
               const config = {
-                  buttonText: "Scroll Down"
+                  buttonText: commonTranslation[lang].buttonText
               };
 
-              // 注入配置到页面中
-              const buttonElement = document.getElementById('scroll-button');
-              buttonElement.textContent = config.buttonText; // 设置按钮文本
+              // 如果需要在页面上设置按钮文本
+              document.getElementById('scroll-button').textContent = config.buttonText;
           </script>
         <div class="icg-text_with_quote_module">
           <div class="container-fluid">
@@ -921,7 +934,7 @@
                   title: 'Clients',
                   description: 'As a global alternative asset manager we invest capital on behalf of our clients by developing long-term and resilient relationships that deliver sustainable value.',
                   links: [
-                      { label: 'Explore the ICG platform', url: '/pc/what-we-do/' },
+                      { label: 'Explore the ICG platform', url: '/what-we-do/' },
                       { label: 'Contact our Client Relations team', url: 'void();' }
                   ]
               };
@@ -989,7 +1002,7 @@
 
           <script>
               // 动态配置项
-              const config = {
+              const imgConfig = {
                   imgSrc: "/public/changli/newImages/home/home_image_0.jpg",
                   title: "US and Europe Private Company Trends: Resilience Sustained"
               };
@@ -998,8 +1011,8 @@
               const imgElement = document.getElementById('image-wp-post-image');
               const titleElement = document.getElementById('post-no-underline');
 
-              imgElement.src = config.imgSrc; // 设置图片源
-              titleElement.textContent = config.title; // 设置标题
+              imgElement.src = imgConfig.imgSrc; // 设置图片源
+              titleElement.textContent = imgConfig.title; // 设置标题
           </script>
 
           <!--  文章1  -->
