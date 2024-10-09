@@ -15,7 +15,7 @@
                             <div
                                 v-for="(c, ci) in children"
                                 :key="ci"
-                                class="leading-9 text-lg"
+                                class="leading-9 text-lg hover:text-primary"
                             >
                                 {{ c.title }}
                             </div>
