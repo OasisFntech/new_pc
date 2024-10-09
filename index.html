@@ -473,59 +473,9 @@
               </div>
 
               <div id="site-header__right">
-                <ul class="menu header-menu d-none d-lg-flex">
-                  <li>
-                    <a href="/" class="current-menu-item">Clients</a>
-                  </li>
-                  <li>
-                    <a
-                      href="/who-we-are/"
-                      class="dropdown"
-                      data-dropdown="#dropdown-who-we-are"
-                      >Who we are</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/what-we-do/"
-                      class="dropdown"
-                      data-dropdown="#dropdown-what-we-do"
-                      >What we do</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/sustainability/"
-                      class="dropdown"
-                      data-dropdown="#dropdown-sustainability"
-                      >Sustainability</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/people-and-careers/"
-                      class="dropdown"
-                      data-dropdown="#dropdown-people"
-                      >People</a
-                    >
-                  </li>
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="/news-insights-analysis/"-->
-<!--                      class="dropdown"-->
-<!--                      data-dropdown="#dropdown-news-insights"-->
-<!--                      >News & insights</a-->
-<!--                    >-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="/shareholders-and-debtholders/"-->
-<!--                      class="dropdown"-->
-<!--                      data-dropdown="#dropdown-shareholders-debtholders"-->
-<!--                      >Shareholders & Debtholders</a-->
-<!--                    >-->
-<!--                  </li>-->
-                </ul>
+                  <ul id="header-menu" class="menu header-menu d-none d-lg-flex">
+                    <!--       script动态注入       -->
+                  </ul>
 
                 <div class="mobile-triggers d-block d-lg-none">
                   <div class="menu-icon menu-trigger">
@@ -539,17 +489,6 @@
                 </div>
               </div>
             </div>
-
-
-<!--              <div id="utility-menu__wrapper" class="g-flex d-none d-lg-flex">-->
-<!--                  <div class="menu-utility-menu-container">-->
-<!--                      <ul id="menu-utility-menu" class="menu">-->
-<!--                          <li class="menu-item menu-item-type-custom menu-item-object-custom">-->
-<!--                              <a href="/clients/portugal">Portugal</a>-->
-<!--                          </li>-->
-<!--                      </ul>-->
-<!--                  </div>-->
-<!--              </div>-->
           </div>
         </div>
       </div>
@@ -932,25 +871,12 @@
           <div class="container-fluid">
             <div class="icg-wrapper">
               <div class="text-with-quote__wrapper g-flex">
-                <div class="wrapper__left">
-                  <div class="content-wrapper">
-                    <h2>Clients</h2>
-                    <p>
-                      As a global alternative asset manager we invest capital on
-                      behalf of our clients by developing long-term and
-                      resilient relationships that deliver sustainable value.
-                    </p>
-                    <ul>
-                      <li>
-                        Explore the <span href="/what-we-do/"
-                          ><strong>ICG platform</strong></span
-                        >
-                      </li>
-                      <li>
-                          <a href="void();" class="service" target="_blank"><strong>Contato</strong></a>
-                        our Client Relations team
-                      </li>
-                    </ul>
+                  <div class="wrapper__left" id="wrapper__left-div">
+                      <div class="content-wrapper">
+                          <h2></h2> <!-- 标题 -->
+                          <p></p>  <!-- 描述 -->
+                          <ul></ul> <!-- 动态生成的链接将添加到这里 -->
+                      </div>
                   </div>
                   <script>
                       fetch(
