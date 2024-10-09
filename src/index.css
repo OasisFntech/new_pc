@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#app {
+    @apply h-full h-full;
+}
+
+#app {
+    @apply capitalize;
+}
+
+:root {
+    --primary: #3A4BFB;
+    --gradient-from: #003B49;
+    --gradient-to: var(--primary);
+}
+
+.main-container {
+    @apply w-[1200px] mx-auto;
+}

@@ -1,0 +1,28 @@
+{
+    "name": "pc_rebuild",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite --mode changli",
+        "build": "vite build --mode changli",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "frontend_common": "github:OasisFntech/brazil-logic.git",
+        "lodash": "^4.17.21",
+        "pinia": "^2.2.4",
+        "vue": "^3.5.10",
+        "vue-i18n": "^10.0.4",
+        "vue-router": "^4.4.5"
+    },
+    "devDependencies": {
+        "@originjs/vite-plugin-commonjs": "^1.0.3",
+        "@vitejs/plugin-vue": "^5.1.4",
+        "autoprefixer": "^10.4.20",
+        "postcss": "^8.4.47",
+        "tailwindcss": "^3.4.13",
+        "unplugin-auto-import": "^0.18.3",
+        "vite": "^5.4.8"
+    }
+}
