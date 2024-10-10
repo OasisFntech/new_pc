@@ -2,7 +2,7 @@
     <div class="main-container text-lg leading-7 my-[150px]">
         <div class="flex items-center justify-between mb-10">
             <div class="text-[42px]">
-              {{ t('common.relateTint') }}
+              {{ $t('common.relateTint') }}
             </div>
 
             <div class="text-primary text-3xl">
@@ -55,7 +55,6 @@ register()
 import { ArrowCircleLeft16Filled, ArrowCircleRight16Filled } from '@vicons/fluent'
 import { Icon } from '@vicons/utils'
 import { useNewsStore } from '@/pinia/index.js'
-import { t } from '@/lang'
 
 const { news } = storeToRefs(useNewsStore())
 

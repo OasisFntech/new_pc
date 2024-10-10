@@ -12,7 +12,7 @@
             </template>
 
             <div class="title">
-                {{ t('home.dynamicTitle') }}
+                {{ $t('home.dynamicTitle') }}
             </div>
         </image-box>
 
@@ -20,28 +20,28 @@
             <div class="main-container mt-[200px] mb-[150px] flex items-center justify-between">
                 <div class="w-[600px]">
                     <div class="text-gradient_from text-[70px] mb-5">
-                        {{ t('home.clientsTitle') }}
+                        {{ $t('home.clientsTitle') }}
                     </div>
 
                     <div class="text-2xl normal-case leading-9">
-                      {{ t('home.clientsDescription') }}
+                      {{ $t('home.clientsDescription') }}
                     </div>
 
                     <div class="text-2xl normal-case leading-9 mt-5 ml-3">
-                      {{ t('home.explorePlatform') }}
+                      {{ $t('home.explorePlatform') }}
                     </div>
 
                     <div class="text-2xl normal-case leading-9 ml-3">
-                      {{ t('home.contactClientRelations') }}
+                      {{ $t('home.contactClientRelations') }}
                     </div>
                 </div>
 
                 <div class="w-[350px] text-[40px]">
                     <div class="text-[75%] leading-[48px]">
-                      {{ t('home.quote') }}
+                      {{ $t('home.quote') }}
                     </div>
                     <div class="text-xl mt-16">
-                      {{ t('home.author') }}
+                      {{ $t('home.author') }}
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
             container-class="h-screen"
         >
             <div class="title">
-              {{ t('home.imgTitle') }}
+              {{ $t('home.imgTitle') }}
             </div>
         </image-box>
 
@@ -67,7 +67,6 @@ import Grid from '@/components/Grid.vue'
 import News from '@/components/News.vue'
 import { useHomeGird } from '@/config/index.js'
 import ImageBox from '@/components/ImageBox.vue'
-import { t } from '@/lang'
 
 const grid = useHomeGird()
 

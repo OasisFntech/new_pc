@@ -26,9 +26,6 @@
 </template>
 
 <script setup>
-
-import { t } from '@/lang'
-
 defineProps({
     grid: {
         type: Array,
