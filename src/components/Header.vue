@@ -1,6 +1,6 @@
 <template>
-    <div class="header">
-        <div class="main-container pt-10 flex items-center">
+    <div class="header" :class="{ hide, bg }">
+        <div class="main-container flex items-center">
             <router-link to="/">
                 <img
                     alt="logo"
@@ -54,12 +54,39 @@ const nav = computed(() => [
     }
 ])
 
+const lastScrollY = ref(0),
+    hide = ref(false),
+    bg = ref(false)
+
+const handleScroll = () => {
+    bg.value = window.scrollY > 90
+    hide.value = window.scrollY > lastScrollY.value
+    lastScrollY.value = window.scrollY
+}
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll)
+})
+
+onBeforeUnmount(() => {
+    window.removeEventListener('scroll', handleScroll)
+})
+
 defineOptions({ name: 'Header' })
 </script>
 
 <style scoped>
 .header {
-    @apply h-[90px] w-full fixed top-0 left-0 z-10;
+    @apply h-[90px] w-full fixed top-0 left-0 z-10 pt-8;
+    transition: transform 0.3s ease;
+}
+
+.header.hide {
+    transform: translateY(-100%);
+}
+
+.header.bg {
+    background-image: linear-gradient(113.82deg, var(--gradient-from) 36.13%, var(--gradient-to) 122.32%);
 }
 
 .nav {
@@ -69,6 +96,7 @@ defineOptions({ name: 'Header' })
 .nav-link {
     @apply leading-7 rounded-full px-5 border border-primary;
 }
+
 .nav .router-link-exact-active,
 .nav-link:hover {
     @apply bg-white text-primary border-white;
