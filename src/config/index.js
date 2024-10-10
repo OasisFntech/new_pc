@@ -65,6 +65,210 @@ export const useHomeGird = () => {
 	])
 }
 
+export const useWhoGird = () => {
+	const { t } = useI18n()
+
+	return computed(() => [
+		{
+			title: t('who.posts1[0].title'), // 使用 t 函数获取多语言文本
+			subhead: t('who.posts1[0].description'),
+			cover: 1,
+		},
+		{
+			title: t('who.posts1[1].title'),
+			subhead: t('who.posts1[1].description'),
+			cover: 2,
+		},
+		{
+			title: t('who.posts1[2].title'),
+			subhead: t('who.posts1[2].description'),
+			cover: 3,
+		},
+		{
+			title: t('who.posts1[3].title'),
+			subhead: t('who.posts1[4].description'),
+			cover: 4,
+		},
+		undefined,
+		{
+			title: t('who.posts2[0].title'),
+			subhead: t('who.posts2[0].description'),
+			cover: 5,
+		},
+		{
+			title: t('who.posts2[1].title'),
+			subhead: t('who.posts2[1].description'),
+			cover: 6,
+		},
+		{
+			title: t('who.posts2[2].title'),
+			subhead: t('who.posts2[2].description'),
+			cover: 7,
+		},
+		undefined,
+		undefined,
+		{
+			title: t('who.posts3[0].title'),
+			subhead: t('who.posts3[0].description'),
+			cover: 8,
+		},
+		{
+			title: t('who.posts3[1].title'),
+			subhead: t('who.posts3[1].description'),
+			cover: 9,
+		},
+		undefined,
+		undefined,
+		{
+			title: t('who.posts4[0].title'),
+			subhead: t('who.posts4[0].description'),
+			cover: 10,
+		},
+		{
+			title: t('who.posts4[1].title'),
+			subhead: t('who.posts4[1].description'),
+			cover: 11,
+		},
+	])
+}
+
+export const useWhatGird = () => {
+	const { t } = useI18n()
+
+	return computed(() => [
+		undefined,
+		{
+			title: t('what.posts1[0].title'), // 使用 t 函数获取多语言文本
+			subhead: t('what.posts1[0].description'),
+			cover: 1,
+		},
+		{
+			title: t('what.posts1[1].title'),
+			subhead: t('what.posts1[1].description'),
+			cover: 2,
+		},
+		{
+			title: t('what.posts1[2].title'),
+			subhead: t('what.posts1[2].description'),
+			cover: 3,
+		},
+		undefined,
+		undefined,
+		{
+			title: t('people.posts2[0].title'),
+			subhead: t('people.posts2[0].description'),
+			cover: 4,
+		},
+		{
+			title: t('people.posts2[1].title'),
+			subhead: t('people.posts2[1].description'),
+			cover: 5,
+		}
+	])
+}
+
+export const useSustainGird = () => {
+	const { t } = useI18n()
+
+	return computed(() => [
+		{
+			title: t('sustain.posts1[0].title'), // 使用 t 函数获取多语言文本
+			subhead: t('sustain.posts1[0].description'),
+			cover: 1,
+		},
+		{
+			title: t('sustain.posts1[1].title'),
+			subhead: t('sustain.posts1[1].description'),
+			cover: 2,
+		},
+		{
+			title: t('sustain.posts1[2].title'),
+			subhead: t('sustain.posts1[2].description'),
+			cover: 3,
+		},
+		undefined,
+		undefined,
+		{
+			title: t('sustain.posts2[0].title'),
+			subhead: t('sustain.posts2[0].description'),
+			cover: 4,
+		},
+		{
+			title: t('sustain.posts2[1].title'),
+			subhead: t('sustain.posts2[1].description'),
+			cover: 5,
+		},
+		{
+			title: t('sustain.posts2[2].title'),
+			subhead: t('sustain.posts2[2].description'),
+			cover: 6,
+		},
+		undefined,
+		undefined,
+		{
+			title: t('sustain.posts3[0].title'),
+			subhead: t('sustain.posts3[0].description'),
+			cover: 7,
+		},
+		{
+			title: t('sustain.posts3[1].title'),
+			subhead: t('sustain.posts3[1].description'),
+			cover: 8,
+		},
+	])
+}
+
+export const usePeopleGird = () => {
+	const { t } = useI18n()
+
+	return computed(() => [
+		{
+			title: t('people.posts1[0].title'), // 使用 t 函数获取多语言文本
+			subhead: t('people.posts1[0].description'),
+			cover: 1,
+		},
+		{
+			title: t('people.posts1[1].title'),
+			subhead: t('people.posts1[1].description'),
+			cover: 2,
+		},
+		{
+			title: t('people.posts1[2].title'),
+			subhead: t('people.posts1[2].description'),
+			cover: 3,
+		},
+		undefined,
+		undefined,
+		{
+			title: t('people.posts2[0].title'),
+			subhead: t('people.posts2[0].description'),
+			cover: 4,
+		},
+		{
+			title: t('people.posts2[1].title'),
+			subhead: t('people.posts2[1].description'),
+			cover: 5,
+		},
+		{
+			title: t('people.posts2[2].title'),
+			subhead: t('people.posts2[2].description'),
+			cover: 6,
+		},
+		undefined,
+		undefined,
+		{
+			title: t('people.posts3[0].title'),
+			subhead: t('people.posts3[0].description'),
+			cover: 7,
+		},
+		{
+			title: t('people.posts3[1].title'),
+			subhead: t('people.posts3[1].description'),
+			cover: 8,
+		},
+	])
+}
+
 export const useHomeIntroduce = () => {
 	const { t } = useI18n()
 

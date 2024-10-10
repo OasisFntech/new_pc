@@ -22,7 +22,7 @@
             source="/assets/home_cover.jpg"
             container-class="h-screen"
         >
-            <div class="title">
+            <div class="title w-[70%]">
               {{ $t('home.imgTitle') }}
             </div>
         </image-box>

@@ -63,6 +63,33 @@ export default {
             quote: "Creating sustainable value by partnering with ambitious businesses.",
             author: ""
         },
+        summary: {
+            title: 'At a glance',
+            stats: [
+                { value: '$101bn', description: 'Total assets under management (AUM)', date: '(30 June 2024)' },
+                { value: '635', description: 'Permanent employees', date: '(31 March 2024)' },
+                { value: '19', description: 'Worldwide locations', date: '' },
+            ]
+        },
+        posts1: [
+            { title: "Our purpose & business", description: "Creating sustainable value by partnering with ambitious businesses" },
+            { title: "Our culture & values", description: "We aim to create a culture in which our employees feel comfortable to bring their entire experience and background to work, in order to develop their talents and deliver exceptional results" },
+            { title: "Leadership & governance", description: "ICG is committed to the highest standards of corporate governance" },
+            { title: "Corporate social responsibility", description: "We look to support organisations that are aligned to our wider corporate objectives and areas of priority" },
+        ],
+        posts2: [
+            { title: "Our history", description: "ICG was founded in 1989 on the principles of flexible investment solutions, specialist experience and local knowledge" },
+            { title: "Our offices", description: "Established in Europe, we have built a global alternative asset management business across sectors and geographies, which are increasingly interconnected" },
+            { title: "Company information", description: "ICG’s registered company name, number and office address" }
+        ],
+        posts3: [
+            { title: "Sustainability", description: "We support responsible and sustainable business practices through our investments and operations" },
+            { title: "People", description: "Our people are fundamental to every part of our success" },
+        ],
+        posts4: [
+            { title: "Clients", description: "Significant and resilient value creation for our clients" },
+            { title: "Shareholders & Debtholders", description: "Over 30 years we’ve built an outstanding track record in creating value and growth through responsible, innovative strategies developed by our diverse global team" },
+        ],
     },
     what: {
         dynamicTitle: "What We Do",
@@ -77,7 +104,16 @@ export default {
             ],
             quote: "We manage and invest capital on behalf of our clients by developing long-term and resilient relationships that deliver sustainable value.",
             author: ""
-        }
+        },
+        posts1: [
+            { title: "Clients", description: "Significant and resilient value creation for our clients." },
+            { title: "Leadership & governance", description: "ICG is committed to the highest standards of corporate governance." },
+            { title: "Sustainability and people reports", description: "Investing sustainably, operating purposefully. ICG’s environmental, social and governance (ESG) reporting present and past." },
+        ],
+        posts2: [
+            { title: "Who we are", description: "A global leader in alternative asset management." },
+            { title: "News & insights", description: "Recent ICG news, insights, research and analysis." },
+        ]
     },
     sustain: {
         dynamicTitle: "Sustainability",
@@ -92,7 +128,21 @@ export default {
             ],
             quote: "Sustainability and People Report",
             author: "Our latest and historical ESG reports and disclosures"
-        }
+        },
+        posts1: [
+            { title: "Investing responsibly", description: "ESG issues are an important driver of investment value and source of investment risk. By implementing responsible and sustainable business practices we can deliver both long-term value and attractive returns to our clients." },
+            { title: "Our ESG priorities", description: "It is crucial for us to understand, prioritise and report on the issues that matter most to our business and our stakeholders. Focusing on our most material issues will underpin our long-term success." },
+            { title: "Towards net zero", description: "We are committed to support the goal of net zero GHG emissions by 2040 or sooner, in line with global efforts to limit warming to 1.5°C." },
+        ],
+        posts2: [
+            { title: "ESG governance", description: "ICG has been a publicly listed company since 1994. We seek to promote the highest standards of corporate governance throughout our activities and culture to act in the best interests of our stakeholders." },
+            { title: "Climate Change Policy", description: "Covering 100% of AUM, policy requires us to consider the implications of climate-related risk and opportunities in our investment research, valuation, and decision-making processes." },
+            { title: "Sustainability and people reports", description: "Investing sustainably, operating purposefully. ICG’s environmental, social and governance (ESG) reporting present and past." },
+        ],
+        posts3: [
+            { title: "Who we are", description: "A global leader in alternative asset management." },
+            { title: "What we do", description: "We provide flexible and sustainable solutions to both providers and users of capital." },
+        ]
     },
     people: {
         dynamicTitle: "People",
@@ -107,6 +157,20 @@ export default {
             ],
             quote: "Sustainability and People Report",
             author: "We invest in our people because their progress supports our growth, and their new ideas underpin our innovation."
-        }
+        },
+        posts1: [
+            { title: "Development and engagement", description: "We appreciate that there are many paths to fulfilment and success, and no two career journeys look the same." },
+            { title: "Diversity, Equity and Inclusion", description: "Through an inclusive approach, we cultivate a diversity of perspectives." },
+            { title: "Early careers", description: "Graduate, internship and early careers mentoring programme." },
+        ],
+        posts2: [
+            { title: "Leadership & governance", description: "ICG is committed to the highest standards of corporate governance." },
+            { title: "People strategy", description: "We are a long-term business that manages capital on behalf of our clients, looks to generate attractive returns for our shareholders, and seeks to have a positive impact on our broad range of stakeholders, including our employees." },
+            { title: "Sustainability", description: "We support responsible and sustainable business practices through our investments and operations." },
+        ],
+        posts3: [
+            { title: "Who we are", description: "A global leader in alternative asset management." },
+            { title: "What we do", description: "We provide flexible and sustainable solutions to both providers and users of capital." },
+        ]
     }
 }

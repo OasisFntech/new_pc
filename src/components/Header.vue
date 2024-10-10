@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div>
         <div class="main-container pt-10 flex items-center">
             <router-link to="/">
                 <img
