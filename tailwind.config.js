@@ -18,6 +18,7 @@ export default {
 		colors: {
 			...colors,
 			primary: 'var(--primary)',
+			grey: 'var(--grey)',
 			border: 'var(--border)',
 			gradient_from: 'var(--gradient-from)',
 		},

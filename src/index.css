@@ -15,6 +15,7 @@ body,
 
 :root {
     --primary: #3A4BFB;
+    --grey: rgba(0, 59, 73, .05);
     --gradient-from: #003B49;
     --gradient-to: var(--primary);
     --border: #B6B6B6;
@@ -22,4 +23,8 @@ body,
 
 .main-container {
     @apply w-[1200px] mx-auto;
+}
+
+.cover-title {
+    @apply absolute w-[70%] bottom-0 px-32 pb-28 text-white text-[50px] whitespace-pre-wrap leading-[58px];
 }

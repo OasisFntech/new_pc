@@ -11,7 +11,7 @@
                 />
             </template>
 
-            <div class="title">
+            <div class="cover-title">
                 {{ $t('home.dynamicTitle') }}
             </div>
         </image-box>
@@ -22,7 +22,7 @@
             source="/assets/home_cover.jpg"
             container-class="h-screen"
         >
-            <div class="title w-[70%]">
+            <div class="cover-title">
               {{ $t('home.imgTitle') }}
             </div>
         </image-box>
@@ -47,7 +47,4 @@ defineOptions({ name: 'home' })
 </script>
 
 <style scoped>
-.title {
-   @apply absolute bottom-0 px-32 pb-28 text-white text-[50px] whitespace-pre-wrap leading-[58px];
-}
 </style>

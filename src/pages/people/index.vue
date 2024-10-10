@@ -1,15 +1,17 @@
 <template>
+    <Cover :title="$t('who.dynamicTitle')" source="/assets/cover_14.jpg"/>
 
-  <Introduce :clients-config="clientsConfig" />
+    <Introduce :clients-config="clientsConfig"/>
 
-  <Grid :grid />
+    <Grid :grid/>
 
 </template>
 
 <script setup>
-import Introduce from "@/components/Intorduce.vue"
-import {usePeopleGird} from "@/config/index.js"
-import Grid from "@/components/Grid.vue"
+import { usePeopleGird } from '@/config/index.js'
+import Introduce from '@/components/Intorduce.vue'
+import Grid from '@/components/Grid.vue'
+import Cover from '@/components/Cover.vue'
 
 const clientsConfig = usePeopleGird(1)
 const grid = usePeopleGird()

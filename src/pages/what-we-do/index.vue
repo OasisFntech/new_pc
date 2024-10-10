@@ -1,4 +1,6 @@
 <template>
+    <Cover :title="$t('who.dynamicTitle')" source="/assets/cover_2.jpg"/>
+
   <Introduce :clients-config="clientsConfig" />
 
   <!-- 添加网格组件 -->
@@ -41,6 +43,7 @@
 import Introduce from "@/components/Intorduce.vue"
 import { useWhatGird } from "@/config/index.js"
 import Grid from "@/components/Grid.vue";
+import Cover from '@/components/Cover.vue'
 
 const clientsConfig = useWhatGird(1)
 const grid = useWhatGird()

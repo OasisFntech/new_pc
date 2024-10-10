@@ -100,62 +100,62 @@ export const useWhoGird = (index) => {
 		{
 			title: t('who.posts1[0].title'), // 使用 t 函数获取多语言文本
 			subhead: t('who.posts1[0].description'),
-			cover: 1,
+			cover: 16,
 		},
 		{
 			title: t('who.posts1[1].title'),
 			subhead: t('who.posts1[1].description'),
-			cover: 2,
+			cover: 17,
 		},
 		{
 			title: t('who.posts1[2].title'),
 			subhead: t('who.posts1[2].description'),
-			cover: 3,
+			cover: 18,
 		},
 		{
 			title: t('who.posts1[3].title'),
 			subhead: t('who.posts1[4].description'),
-			cover: 4,
+			cover: 19,
 		},
 		undefined,
 		{
 			title: t('who.posts2[0].title'),
 			subhead: t('who.posts2[0].description'),
-			cover: 5,
+			cover: 20,
 		},
 		{
 			title: t('who.posts2[1].title'),
 			subhead: t('who.posts2[1].description'),
-			cover: 6,
+			cover: 21,
 		},
 		{
 			title: t('who.posts2[2].title'),
 			subhead: t('who.posts2[2].description'),
-			cover: 7,
+			cover: 22,
 		},
-		undefined,
-		undefined,
 		{
 			title: t('who.posts3[0].title'),
 			subhead: t('who.posts3[0].description'),
-			cover: 8,
+			cover: 15,
 		},
 		{
 			title: t('who.posts3[1].title'),
 			subhead: t('who.posts3[1].description'),
-			cover: 9,
+			cover: 14,
 		},
+		undefined,
+		undefined,
 		undefined,
 		undefined,
 		{
 			title: t('who.posts4[0].title'),
 			subhead: t('who.posts4[0].description'),
-			cover: 10,
+			cover: 23,
 		},
 		{
 			title: t('who.posts4[1].title'),
 			subhead: t('who.posts4[1].description'),
-			cover: 11,
+			cover: 24,
 		},
 	])
 }

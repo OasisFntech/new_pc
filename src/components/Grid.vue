@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <img
-                    :src="`/assets/grid_cover_${item.cover}.jpg`"
+                    :src="`/assets/cover_${item.cover}.jpg`"
                     :alt="item.title"
                     class="mt-7"
                     style="aspect-ratio: 264 / 145;"

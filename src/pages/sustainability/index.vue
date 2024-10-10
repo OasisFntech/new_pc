@@ -1,15 +1,17 @@
 <template>
+    <Cover :title="$t('who.dynamicTitle')" source="/assets/cover_15.jpg" />
 
-  <Introduce :clients-config="clientsConfig" />
+    <Introduce :clients-config="clientsConfig"/>
 
-  <Grid :grid />
+    <Grid :grid/>
 
 </template>
 
 <script setup>
-import Introduce from "@/components/Intorduce.vue"
-import {useSustainGird} from "@/config/index.js"
-import Grid from "@/components/Grid.vue"
+import Introduce from '@/components/Intorduce.vue'
+import Cover from '@/components/Cover.vue'
+import Grid from '@/components/Grid.vue'
+import { useSustainGird } from '@/config/index.js'
 
 const clientsConfig = useSustainGird(1)
 
