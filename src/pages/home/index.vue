@@ -8,6 +8,8 @@
             src="/assets/cover_video.mp4"
         />
 
+        <Grid :grid="home_grid" />
+
         <Tutor />
 
         <News />
@@ -15,8 +17,10 @@
 </template>
 
 <script setup>
+import Grid from '@/components/Grid.vue'
 import Tutor from '@/components/Tutor.vue'
 import News from '@/components/News.vue'
+import { home_grid } from '@/config/index.js'
 
 defineOptions({ name: 'home' })
 </script>

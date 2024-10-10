@@ -18,6 +18,8 @@ export default {
 		colors: {
 			...colors,
 			primary: 'var(--primary)',
+			border: 'var(--border)',
+			gradient_from: 'var(--gradient-from)',
 		},
 	},
 	plugins: []

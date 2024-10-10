@@ -30,7 +30,6 @@
                 <img
                     :src="portrait"
                     :alt="name"
-                    style="aspect-ratio: 184 / 101;"
                 >
 
                 <div class="mt-7">

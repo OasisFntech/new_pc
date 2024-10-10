@@ -17,6 +17,7 @@ body,
     --primary: #3A4BFB;
     --gradient-from: #003B49;
     --gradient-to: var(--primary);
+    --border: #B6B6B6;
 }
 
 .main-container {
