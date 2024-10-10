@@ -12,9 +12,7 @@
             </template>
 
             <div class="title">
-                {{
-                    `Significant and resilient value\ncreation for our clients`
-                }}
+                {{ t('home.dynamicTitle') }}
             </div>
         </image-box>
 
@@ -22,20 +20,28 @@
             <div class="main-container mt-[200px] mb-[150px] flex items-center justify-between">
                 <div class="w-[600px]">
                     <div class="text-gradient_from text-[70px] mb-5">
-                        Clients
+                        {{ t('home.clientsTitle') }}
                     </div>
 
                     <div class="text-2xl normal-case leading-9">
-                        As a global alternative asset manager we invest capital on behalf of our clients by developing long-term and resilient relationships that deliver sustainable value.
+                      {{ t('home.clientsDescription') }}
+                    </div>
+
+                    <div class="text-2xl normal-case leading-9 mt-5 ml-3">
+                      {{ t('home.explorePlatform') }}
+                    </div>
+
+                    <div class="text-2xl normal-case leading-9 ml-3">
+                      {{ t('home.contactClientRelations') }}
                     </div>
                 </div>
 
                 <div class="w-[350px] text-[40px]">
                     <div class="text-[75%] leading-[48px]">
-                        We focus on consistently delivering performance for our clients through economic cycles. We value long term relationships and shared success with our clients and portfolio companies.
+                      {{ t('home.quote') }}
                     </div>
                     <div class="text-xl mt-16">
-                        Benoit Durteste, CIO & CEO
+                      {{ t('home.author') }}
                     </div>
                 </div>
             </div>
@@ -46,9 +52,7 @@
             container-class="h-screen"
         >
             <div class="title">
-                {{
-                    `US and Europe Private Company\nTrends: Resilience Sustained`
-                }}
+              {{ t('home.imgTitle') }}
             </div>
         </image-box>
 
@@ -63,6 +67,7 @@ import Grid from '@/components/Grid.vue'
 import News from '@/components/News.vue'
 import { useHomeGird } from '@/config/index.js'
 import ImageBox from '@/components/ImageBox.vue'
+import { t } from '@/lang'
 
 const grid = useHomeGird()
 

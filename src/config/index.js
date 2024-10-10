@@ -3,63 +3,63 @@ export const useHomeGird = () => {
 
 	return computed(() => [
 		{
-			title: 'Who we are',
-			subhead: 'A global leader in alternative asset management',
+			title: t('home.posts1[0].title'), // 使用 t 函数获取多语言文本
+			subhead: t('home.posts1[0].description'),
 			cover: 1,
 		},
 		{
-			title: 'What we do',
-			subhead: 'We provide flexible and sustainable solutions to both providers and users of capital',
+			title: t('home.posts1[1].title'),
+			subhead: t('home.posts1[1].description'),
 			cover: 2,
 		},
 		undefined,
 		undefined,
 		undefined,
 		{
-			title: 'European\nCorporate',
-			subhead: 'Flagship strategy with a 34-year track record',
+			title: t('home.posts2[0].title'),
+			subhead: t('home.posts2[0].description'),
 			cover: 3,
 		},
 		{
-			title: 'Strategic Equity',
-			subhead: 'ICGSE is one of the largest investors globally that is focused exclusively on GP-led transactions',
+			title: t('home.posts2[1].title'),
+			subhead: t('home.posts2[1].description'),
 			cover: 4,
 		},
 		{
-			title: 'Credit',
-			subhead: 'Investing in primary and secondary public credit markets',
+			title: t('home.posts2[2].title'),
+			subhead: t('home.posts2[2].description'),
 			cover: 5,
 		},
 		{
-			title: 'European\nInfrastructure',
-			subhead: 'The European Infrastructure team looks to acquire a diversified sustainable portfolio of Core-+ mid-market infrastructure assets across Europe.',
+			title: t('home.posts3[0].title'),
+			subhead: t('home.posts3[0].description'),
 			cover: 6,
 		},
 		{
-			title: 'European Mid-\nMarket',
-			subhead: 'The strategy is a replica of ICG\'s European Corporate but targets smaller mid-market transactions.',
+			title: t('home.posts3[1].title'),
+			subhead: t('home.posts3[1].description'),
 			cover: 7,
 		},
 		{
-			title: 'Life Sciences',
-			subhead: 'The strategy is focused on creating and building life science companies addressing commercially attractive markets in diseases of high unmet medical needs.',
+			title: t('home.posts3[2].title'),
+			subhead: t('home.posts3[2].description'),
 			cover: 8,
 		},
 		undefined,
 		undefined,
 		{
-			title: 'LP Secondaries',
-			subhead: 'Secondary strategy focusing on LP-led transactions.',
+			title: t('home.posts4[0].title'),
+			subhead: t('home.posts4[0].description'),
 			cover: 9,
 		},
 		{
-			title: 'North American Private Debt',
-			subhead: 'Focuses on investing in primarily sponsor-backed North American middle-market companies.',
+			title: t('home.posts4[1].title'),
+			subhead: t('home.posts4[1].description'),
 			cover: 10,
 		},
 		{
-			title: 'Real Estate',
-			subhead: 'ICG Real Estate invests in real estate assets and platforms internationally.',
+			title: t('home.posts4[2].title'),
+			subhead: t('home.posts4[2].description'),
 			cover: 11,
 		}
 	])

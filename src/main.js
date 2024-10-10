@@ -2,7 +2,7 @@ import { axiosInterceptors, onFetchErr } from 'frontend_common/fetch'
 
 import App from './App.vue'
 import router from '@/router.js'
-import i18n from '@/i18n'
+import i18n from '/src/lang'
 import './index.css'
 import ImageBox from '@/components/ImageBox.vue'
 
