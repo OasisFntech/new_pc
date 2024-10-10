@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container grid grid-cols-4 gap-x-12 gap-y-[150px] py-[150px]">
+    <div class="main-container grid grid-cols-4 gap-x-12 gap-y-[150px] my-[150px]">
         <div
             v-for="(item, i) in grid"
             :key="i"

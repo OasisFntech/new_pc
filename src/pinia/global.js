@@ -19,7 +19,7 @@ export const useNewsStore = defineStore('news', () => {
 })
 
 export const useTutorStore = defineStore('tutor', () => {
-	const { list: tutor } = useRequest({
+	const { response: tutor } = useRequest({
 		url: API_PATH.TUTOR,
 		method: FETCH_METHOD.GET,
 		params: {

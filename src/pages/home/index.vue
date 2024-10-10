@@ -8,9 +8,18 @@
             src="/assets/cover_video.mp4"
         />
 
-        <Grid :grid="home_grid" />
+        <image-box
+            source="/assets/home_cover.jpg"
+            container-class="h-screen"
+        >
+            <div class="absolute bottom-0 px-32 pb-28 text-white text-[50px] whitespace-pre-wrap">
+                {{
+                    `US and Europe Private Company\nTrends: Resilience Sustained`
+                }}
+            </div>
+        </image-box>
 
-        <Tutor />
+        <Grid :grid />
 
         <News />
     </div>
@@ -18,9 +27,11 @@
 
 <script setup>
 import Grid from '@/components/Grid.vue'
-import Tutor from '@/components/Tutor.vue'
 import News from '@/components/News.vue'
-import { home_grid } from '@/config/index.js'
+import { useHomeGird } from '@/config/index.js'
+import ImageBox from '@/components/ImageBox.vue'
+
+const grid = useHomeGird()
 
 defineOptions({ name: 'home' })
 </script>

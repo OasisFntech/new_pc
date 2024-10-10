@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container text-lg leading-7 py-[150px]">
+    <div class="main-container text-lg leading-7 my-[150px]">
         <div class="flex items-center justify-between mb-10">
             <div class="text-[42px]">
                 Related people
@@ -24,24 +24,27 @@
             class="text-sm"
         >
             <swiper-slide
-                v-for="{ id, portrait, name, desc, categoryName } in tutor"
+                v-for="{ id, portrait, name, categoryName, workCompany } in tutor"
                 :key="id"
             >
-                <img
-                    :src="portrait"
-                    :alt="name"
-                >
+                <div style="aspect-ratio: 274 / 151;">
+                    <img
+                        :src="portrait"
+                        :alt="name"
+                        class="w-full h-full"
+                    >
+                </div>
 
-                <div class="mt-7">
+                <div class="mt-7 font-bold">
                     {{ name }}
                 </div>
 
                 <div class="italic">
-                    {{ desc }}
+                    {{ categoryName }}
                 </div>
 
                 <div class="mt-4">
-                    {{ categoryName }}
+                    {{ workCompany }}
                 </div>
             </swiper-slide>
         </swiper-container>
@@ -62,5 +65,7 @@ defineOptions({ name: 'Tutor' })
 </script>
 
 <style scoped>
-
+.swiper-button-disabled {
+    @apply opacity-30;
+}
 </style>

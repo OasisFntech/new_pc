@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container text-lg leading-7 py-[150px]">
+    <div class="main-container text-lg leading-7 my-[150px]">
         <div class="flex items-center justify-between mb-10">
             <div class="text-[42px]">
                 Related content
