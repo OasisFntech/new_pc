@@ -19,7 +19,13 @@ export default ({ mode }) => {
 			}
 		},
 		plugins: [
-			vue(),
+			vue({
+				template: {
+					compilerOptions: {
+						isCustomElement: tag => tag.includes('swiper-')
+					}
+				}
+			}),
 			vite_build_plugin(),
 			viteCommonjs(),
 			AutoImport({

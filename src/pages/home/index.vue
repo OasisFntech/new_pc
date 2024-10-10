@@ -8,12 +8,15 @@
             src="/assets/cover_video.mp4"
         />
 
-        <Related />
+        <Tutor />
+
+        <News />
     </div>
 </template>
 
 <script setup>
-import Related from '@/components/Related.vue'
+import Tutor from '@/components/Tutor.vue'
+import News from '@/components/News.vue'
 
 defineOptions({ name: 'home' })
 </script>

@@ -6,11 +6,11 @@
             </div>
 
             <div class="text-primary text-3xl">
-                <Icon class="cursor-pointer prevArrow">
+                <Icon class="cursor-pointer newPrev">
                     <ArrowCircleLeft16Filled />
                 </Icon>
 
-                <Icon class="ml-2.5 cursor-pointer nextArrow">
+                <Icon class="ml-2.5 cursor-pointer newsNext">
                     <ArrowCircleRight16Filled />
                 </Icon>
             </div>
@@ -20,10 +20,10 @@
             slides-per-view="3"
             space-between="48"
             css-mode="true"
-            :navigation="{ enable: true, prevEl: '.prevArrow', nextEl: '.nextArrow' }"
+            :navigation="{ enable: true, prevEl: '.newPrev', nextEl: '.newsNext' }"
         >
             <swiper-slide
-                v-for="{ id, img, title, releaseDate } in list"
+                v-for="{ id, img, title, releaseDate } in news"
                 :key="id"
             >
                 <img
@@ -52,23 +52,11 @@
 import { register } from 'swiper/element/bundle'
 register()
 
-import { usePagination } from 'frontend_common/fetch'
 import { ArrowCircleLeft16Filled, ArrowCircleRight16Filled } from '@vicons/fluent'
 import { Icon } from '@vicons/utils'
+import { useNewsStore } from '@/pinia/index.js'
 
-import { API_PATH } from '@/api/index.js'
-
-const { list } = usePagination({
-    fetchOptions: {
-        url: API_PATH.NEWS,
-        params: {
-            pageNum: 1,
-            pageSize: 20,
-            country: 'br',
-        },
-        initialValues: [],
-    }
-})
+const { news } = storeToRefs(useNewsStore())
 
 defineOptions({ name: 'Related' })
 </script>

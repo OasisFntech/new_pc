@@ -1,3 +1,4 @@
 export const API_PATH = {
-	NEWS: '/information/yaowen'
+	NEWS: '/information/yaowen',
+	TUTOR: '/follow/tutors/category'
 }
