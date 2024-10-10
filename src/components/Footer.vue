@@ -7,7 +7,7 @@
                         v-for="({ title, children }, i) in guide"
                         :key="i"
                     >
-                        <div class="text-4xl py-6 border-t border-b border-white">
+                        <div class="text-3xl py-6 border-t border-b border-white">
                             {{ title }}
                         </div>
 
@@ -15,7 +15,7 @@
                             <div
                                 v-for="(c, ci) in children"
                                 :key="ci"
-                                class="leading-9 text-lg hover:text-primary"
+                                class="leading-9 hover:text-primary"
                             >
                                 {{ c.title }}
                             </div>
