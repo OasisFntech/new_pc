@@ -12,7 +12,7 @@
 
         <ul class="text-2xl normal-case leading-9 mt-8 ml-3">
           <li v-for="(link, index) in clientsConfig.links" :key="index">
-            <a :href="link.url"><strong>{{ link.label }}</strong></a>
+            <a :href="link.url" v-html="link.label"></a>
           </li>
         </ul>
       </div>
