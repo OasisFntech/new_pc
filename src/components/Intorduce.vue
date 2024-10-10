@@ -11,14 +11,14 @@
               </div>
 
               <ul class="text-2xl normal-case leading-9 mt-8 ml-3">
-                  <li v-for="(link, index) in clientsConfig.links" :key="index" class="hover:text-primary">
+                  <li v-for="(link, index) in clientsConfig.links" :key="index" class="hover:text-primary mb-5">
                       <a :href="link.url" v-html="link.label"></a>
                   </li>
               </ul>
           </div>
 
           <div class="introduction-right">
-              <p class="text-[75%] leading-[48px]">
+              <p class="text-[65%] leading-[48px]">
                   {{ clientsConfig.quote }}
               </p>
               <br/>

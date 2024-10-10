@@ -32,8 +32,8 @@
                     style="aspect-ratio: 191 / 105;"
                 >
 
-                <div class="mt-5 text-primary">
-                    News
+                <div class="mt-5 text-primary text-base mb-2">
+                    {{ $t('categories.News') }}
                 </div>
 
                 <div class="text-2xl font-medium">

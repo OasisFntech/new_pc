@@ -98,7 +98,7 @@ export const useWhoGird = (index) => {
 
 	return computed(() => [
 		{
-			title: t('who.posts1[0].title'), // 使用 t 函数获取多语言文本
+			title: t('who.posts1[0].title'),
 			subhead: t('who.posts1[0].description'),
 			cover: 16,
 		},
@@ -157,6 +157,18 @@ export const useWhoGird = (index) => {
 			subhead: t('who.posts4[1].description'),
 			cover: 24,
 		},
+		{
+			title: t('who.posts5[0].title'),
+			subhead: t('who.posts5[0].description'),
+			cover: 25,
+		},
+		{
+			title: t('who.posts5[1].title'),
+			subhead: t('who.posts5[1].description'),
+			cover: 26,
+		},
+		undefined,
+		undefined,
 	])
 }
 
@@ -177,39 +189,39 @@ export const useWhatGird = (type) => {
 		}
 	}
 
-	if (type === 2) {
+	if (type === 3) {
 		return computed(() => [
-			undefined,
 			{
-				title: t('what.posts1[0].title'), // 使用 t 函数获取多语言文本
-				subhead: t('what.posts1[0].description'),
+				title: t('what.posts2[0].title'),
+				subhead: t('what.posts2[0].description'),
 				cover: 1,
 			},
 			{
-				title: t('what.posts1[1].title'),
-				subhead: t('what.posts1[1].description'),
-				cover: 2,
+				title: t('what.posts2[1].title'),
+				subhead: t('what.posts2[1].description'),
+				cover: 26,
 			},
-			{
-				title: t('what.posts1[2].title'),
-				subhead: t('what.posts1[2].description'),
-				cover: 3,
-			}
+			undefined,
+			undefined,
 		])
 	}
 
 	return computed(() => [
 		undefined,
-		undefined,
 		{
-			title: t('people.posts2[0].title'),
-			subhead: t('people.posts2[0].description'),
-			cover: 4,
+			title: t('what.posts1[0].title'), // 使用 t 函数获取多语言文本
+			subhead: t('what.posts1[0].description'),
+			cover: 27,
 		},
 		{
-			title: t('people.posts2[1].title'),
-			subhead: t('people.posts2[1].description'),
-			cover: 5,
+			title: t('what.posts1[1].title'),
+			subhead: t('what.posts1[1].description'),
+			cover: 28,
+		},
+		{
+			title: t('what.posts1[2].title'),
+			subhead: t('what.posts1[2].description'),
+			cover: 29,
 		}
 	])
 }
@@ -298,9 +310,26 @@ export const usePeopleGird = (index) => {
 		}
 	}
 
+	if (index === 2) {
+		return computed(() => [
+			undefined,
+			undefined,
+			{
+				title: t('people.posts3[0].title'),
+				subhead: t('people.posts3[0].description'),
+				cover: 7,
+			},
+			{
+				title: t('people.posts3[1].title'),
+				subhead: t('people.posts3[1].description'),
+				cover: 8,
+			},
+		])
+	}
+
 	return computed(() => [
 		{
-			title: t('people.posts1[0].title'), // 使用 t 函数获取多语言文本
+			title: t('people.posts1[0].title'),
 			subhead: t('people.posts1[0].description'),
 			cover: 1,
 		},
@@ -330,18 +359,6 @@ export const usePeopleGird = (index) => {
 			title: t('people.posts2[2].title'),
 			subhead: t('people.posts2[2].description'),
 			cover: 6,
-		},
-		undefined,
-		undefined,
-		{
-			title: t('people.posts3[0].title'),
-			subhead: t('people.posts3[0].description'),
-			cover: 7,
-		},
-		{
-			title: t('people.posts3[1].title'),
-			subhead: t('people.posts3[1].description'),
-			cover: 8,
-		},
+		}
 	])
 }

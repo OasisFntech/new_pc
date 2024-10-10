@@ -2,15 +2,10 @@ export default {
     common: {
         scrollButton: "Scroll Down",
         relateTint: "Related content",
+        relatePeople: "Related people",
     },
     categories: {
-        News: "News",
-        Insights: "Insights",
-        ResearchAndMarket: "Research & market analysis",
-        AnnualReports: "annual-reports",
-        Investing: "investing-sustainably",
-        RealEstate: "real-estate-debt",
-        LiftSciences: "life-sciences"
+        News: "News"
     },
     404: {
         404: '404',
@@ -90,9 +85,18 @@ export default {
             { title: "Clients", description: "Significant and resilient value creation for our clients" },
             { title: "Shareholders & Debtholders", description: "Over 30 years we’ve built an outstanding track record in creating value and growth through responsible, innovative strategies developed by our diverse global team" },
         ],
+        posts5: [
+            { title: "What we do", description: "We provide flexible and sustainable solutions to both providers and users of capital" },
+            { title: "News & insights", description: "Recent ICG news, insights, research and analysis" }
+        ],
+        articles: {
+            first: "Over more than three decades, we have built an outstanding track record and created long‐term value for our stakeholders: helping companies thrive, institutional investors and shareholders achieve their goals, and creating an inclusive working environment where our colleagues are supported to succeed.",
+            second: "As we continue to grow, we maintain the same relentless focus on delivering sustainable value, knowing that our success will also be shaped by the environmental, social and governance actions we take."
+        },
+        coverTitle: "Benoît Durteste, CEO & CIO, on how ICG creates value and drives growth"
     },
     what: {
-        dynamicTitle: "What We Do",
+        dynamicTitle: "We manage and invest capital on behalf of our clients by developing long-term and resilient relationships that deliver sustainable value",
         intro: {
             title: "What We Do",
             description: "We develop long-term relationships with our business partners to deliver value for clients, companies, shareholders, and employees. We invest responsibly and operate with purpose to contribute to a more sustainable world.",
@@ -130,10 +134,24 @@ export default {
                 { title: "Credit", description: "Total AUM", value: "$18.2bn" },
                 { title: "Real Assets", description: "Total AUM", value: "$11.3bn" }
             ]
+        },
+        articles: {
+            first: {
+                title: "",
+                desc: "ICG’s culture of combining excellence with purpose, and our flexible solutions, specialist expertise, global presence and local knowledge are all integral to our outstanding performance."
+            },
+            second: {
+                title: "Responsible Investing",
+                desc: "It is our responsibility as a member of the investment industry to ensure that our actions are geared towards a more sustainable future. By integrating environmental, social and governance (ESG) factors throughout our investment process, and by ensuring that these factors are managed over the lifetime of our investments, ICG can help to create more successful and sustainable businesses over the long‐term and generate enhanced value for our clients."
+            },
+            third: {
+                title: "Get in Touch",
+                desc: "To find out more about our flexible and sustainable solutions for both providers and users of capital, please contact us."
+            }
         }
     },
     sustain: {
-        dynamicTitle: "Sustainability",
+        dynamicTitle: "Responsible and sustainable business practices",
         intro: {
             title: "Sustainability",
             description: "We support responsible and sustainable business practices through our investments and operations.",
@@ -162,7 +180,7 @@ export default {
         ]
     },
     people: {
-        dynamicTitle: "People",
+        dynamicTitle: "Our people are fundamental to every part of our success",
         intro: {
             title: "People",
             description: "People are at the core of what we do and the impact we have. We are relentless in our focus on developing world-class teams, preserving the entrepreneurial spirit which makes us special, and creating a culture that is inclusive and impactful on a business and a personal level. We have a strong focus on enabling a wide range of people to join our firm and then investing heavily in their development and success. All this reinforces our identity and creates an environment in which to make a real difference.",

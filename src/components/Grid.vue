@@ -7,7 +7,7 @@
         >
             <template v-if="item">
                 <div class="">
-                    <div class="text-gradient_from text-[34px]">
+                    <div class="text-gradient_from text-[34px] mb-5">
                         {{ item.title }}
                     </div>
                     <div>

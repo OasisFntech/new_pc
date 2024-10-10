@@ -2,7 +2,7 @@
     <div class="main-container text-lg leading-7 my-[150px]">
         <div class="flex items-center justify-between mb-10">
             <div class="text-[42px]">
-                Related people
+                {{ $t('common.relatePeople') }}
             </div>
 
             <div class="text-primary text-3xl">
