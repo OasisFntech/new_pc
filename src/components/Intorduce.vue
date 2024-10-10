@@ -33,14 +33,14 @@
 </template>
 
 <script setup>
-import { ref, defineProps } from 'vue';
+import { ref, defineProps } from 'vue'
 
 const props = defineProps({
   clientsConfig: {
     type: Object,
     required: true,
   }
-});
+})
 </script>
 
 <style scoped>

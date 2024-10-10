@@ -8,10 +8,10 @@
 
 <script setup>
 import Introduce from "@/components/Intorduce.vue"
-import {useSustainGird, useSustainIntroduce} from "@/config/index.js"
+import {useSustainGird} from "@/config/index.js"
 import Grid from "@/components/Grid.vue"
 
-const clientsConfig = useSustainIntroduce()
+const clientsConfig = useSustainGird(1)
 
 const grid = useSustainGird()
 

@@ -38,43 +38,16 @@
 import News from '@/components/News.vue'
 import Tutor from '@/components/Tutor.vue'
 import Introduce from "@/components/Intorduce.vue"
-import {useWhoGird, useWhoIntroduce} from "@/config/index.js"
+import {useWhoGird} from "@/config/index.js"
 import SummaryHead from "@/components/SummaryHead.vue"
 import Grid from "@/components/Grid.vue";
 
-const clientsConfig = useWhoIntroduce()
+const clientsConfig = useWhoGird(1)
 const grid = useWhoGird()
 
 defineOptions({ name: 'what-we-do' })
 </script>
 
 <style scoped>
-
-.at-a-glance {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.stats-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.stat-box {
-  border: 2px solid blue;
-  padding: 20px;
-  width: 30%;
-  border-radius: 8px;
-}
-
-.stat-box h3 {
-  font-size: 2.5em;
-  margin: 0;
-}
-
-.stat-box p {
-  margin: 5px 0;
-}
 
 </style>

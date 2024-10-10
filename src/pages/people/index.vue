@@ -8,10 +8,10 @@
 
 <script setup>
 import Introduce from "@/components/Intorduce.vue"
-import {usePeopleGird, usePeopleIntroduce} from "@/config/index.js"
+import {usePeopleGird} from "@/config/index.js"
 import Grid from "@/components/Grid.vue"
 
-const clientsConfig = usePeopleIntroduce()
+const clientsConfig = usePeopleGird(1)
 const grid = usePeopleGird()
 
 defineOptions({ name: 'people' })

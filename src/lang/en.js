@@ -113,7 +113,24 @@ export default {
         posts2: [
             { title: "Who we are", description: "A global leader in alternative asset management." },
             { title: "News & insights", description: "Recent ICG news, insights, research and analysis." },
-        ]
+        ],
+        summary: {
+            title: 'At a glance',
+            stats: [
+                { value: '$101bn', description: 'Total assets under management (AUM)', date: '(30 June 2024)' },
+                { value: '681', description: 'Clients ex. CLOs and listed vehicles', date: '(31 March 2024)' },
+                { value: '19', description: 'Worldwide locations', date: '' },
+            ]
+        },
+        summary1: {
+            title: "The ICG platform",
+            description: "The breadth of our firm underpins our ability to invest across the capital structure and create value through cycles. Explore our flexible investment strategies and financing solutions.",
+            list: [
+                { title: "Corporate", description: "Total assets under management (AUM)", value: "$70.9bn" },
+                { title: "Credit", description: "Total AUM", value: "$18.2bn" },
+                { title: "Real Assets", description: "Total AUM", value: "$11.3bn" }
+            ]
+        }
     },
     sustain: {
         dynamicTitle: "Sustainability",

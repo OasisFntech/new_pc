@@ -36,11 +36,11 @@
 <script setup>
 import Grid from '@/components/Grid.vue'
 import News from '@/components/News.vue'
-import { useHomeGird, useHomeIntroduce } from '@/config/index.js'
+import { useHomeGird } from '@/config/index.js'
 import ImageBox from '@/components/ImageBox.vue'
 import Introduce from "@/components/Intorduce.vue"
 
-const clientsConfig = useHomeIntroduce()
+const clientsConfig = useHomeGird(1)
 const grid = useHomeGird()
 
 defineOptions({ name: 'home' })
