@@ -1,11 +1,14 @@
 <template>
     <div class="image-box" :class="containerClass">
-        <img
-            :src="source"
-            :alt="alt ?? `image-box-${id}`"
-            :class="imageClass"
-            class="size-full"
-        >
+        <slot name="image">
+            <img
+                v-if="source"
+                :src="source"
+                :alt="alt ?? `image-box-${id}`"
+                :class="imageClass"
+                class="size-full"
+            >
+        </slot>
 
         <div class="image-box-container" :class="$attrs.class">
             <slot />
@@ -16,8 +19,7 @@
 <script setup>
 defineProps({
     source: {
-        type: [ String, Object ],
-        required: true
+        type: [ String, Object ]
     },
     alt: String,
     containerClass: [ String, Array, Object ],
