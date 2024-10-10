@@ -64,3 +64,18 @@ export const useHomeGird = () => {
 		}
 	])
 }
+
+export const useHomeIntroduce = () => {
+	const { t } = useI18n()
+
+	return {
+		title: t('home.clientsTitle'),
+		description: t('home.clientsDescription'),
+		links: [
+			{ label: t('home.explorePlatform'), url: '/pc/what-we-do/' },
+			{ label: t('home.contactClientRelations'), url: 'void();' }
+		],
+		quote: t('home.quote'),
+		author: t('home.author')
+	}
+}
